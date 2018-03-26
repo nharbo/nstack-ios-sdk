@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import Serpent
 
-struct RateReminder {
+struct RateReminder: Codable {
     var id = 0
     var title = ""
     var body = ""
@@ -17,28 +16,27 @@ struct RateReminder {
     var laterButtonTitle = ""   // <-laterBtn
     var noButtonTitle = ""      // <-noBtn
     var link: URL?
+    
+    init(from decoder: Decoder) throws {
+        let map = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try map.decode(Int.self, forKey: .id)
+        self.title = try map.decode(String.self, forKey: .title)
+        self.body = try map.decode(String.self, forKey: .body)
+        self.yesButtonTitle = try map.decode(String.self, forKey: .yesButtonTitle)
+        self.laterButtonTitle = try map.decode(String.self, forKey: .laterButtonTitle)
+        self.noButtonTitle = try map.decode(String.self, forKey: .noButtonTitle)
+        self.link = try map.decode(URL.self, forKey: .id)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case body
+        case yesButtonTitle = "yesBtn"
+        case laterButtonTitle = "laterBtn"
+        case noButtonTitle = "noBtn"
+        case link
+    }
+    
 }
 
-extension RateReminder: Serializable {
-    init(dictionary: NSDictionary?) {
-        id               <== (self, dictionary, "id")
-        title            <== (self, dictionary, "title")
-        body             <== (self, dictionary, "body")
-        yesButtonTitle   <== (self, dictionary, "yesBtn")
-        laterButtonTitle <== (self, dictionary, "laterBtn")
-        noButtonTitle    <== (self, dictionary, "noBtn")
-        link             <== (self, dictionary, "link")
-    }
-
-    func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "id")       <== id
-        (dict, "title")    <== title
-        (dict, "body")     <== body
-        (dict, "yesBtn")   <== yesButtonTitle
-        (dict, "laterBtn") <== laterButtonTitle
-        (dict, "noBtn")    <== noButtonTitle
-        (dict, "link")     <== link
-        return dict
-    }
-}

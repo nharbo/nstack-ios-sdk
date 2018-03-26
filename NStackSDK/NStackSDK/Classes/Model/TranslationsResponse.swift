@@ -7,23 +7,21 @@
 //
 
 import Foundation
-import Serpent
 
 struct TranslationsResponse {
     var translations: NSDictionary? // <-data
     var languageData: LanguageData? // <-meta
-}
-
-extension TranslationsResponse: Serializable {
-    init(dictionary: NSDictionary?) {
-        translations <== (self, dictionary, "data")
-        languageData <== (self, dictionary, "meta")
+    
+    
+    init(from decoder: Decoder) throws {
+        let map = try decoder.container(keyedBy: CodingKeys.self)
+        self.translations = try map.decode(String.self, forKey: .translations)
+        self.languageData = try map.decode(String.self, forKey: .languageData)
     }
-
-    func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "data") <== translations
-        (dict, "meta") <== languageData
-        return dict
+    
+    private enum CodingKeys: String, CodingKey {
+        case translations = "data"
+        case languageData = "meta"
     }
 }
+

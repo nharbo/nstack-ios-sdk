@@ -7,26 +7,22 @@
 //
 
 import Foundation
-import Serpent
 
-internal struct Message {
+internal struct Message: Codable {
     var id = ""
     var message = ""
     var showSetting = ""
-}
-
-extension Message: Serializable {
-    init(dictionary: NSDictionary?) {
-        id          <== (self, dictionary, "id")
-        message     <== (self, dictionary, "message")
-        showSetting <== (self, dictionary, "show_setting")
+    
+    init(from decoder: Decoder) throws {
+        let map = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try map.decode(String.self, forKey: .id)
+        self.message = try map.decode(String.self, forKey: .message)
+        self.showSetting = try map.decode(String.self, forKey: .showSetting)
     }
     
-    func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "id")           <== id
-        (dict, "message")      <== message
-        (dict, "show_setting") <== showSetting
-        return dict
+    private enum CodingKeys: String, CodingKey {
+        case count
+        case message
+        case showSetting = "show_setting"
     }
 }

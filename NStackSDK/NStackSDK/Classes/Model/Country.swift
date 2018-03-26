@@ -6,9 +6,9 @@
 //  Copyright © 2016 Nodes ApS. All rights reserved.
 //
 
-import Serpent
+import Foundation
 
-public struct Country {
+public struct Country: Codable {
 	public var id = 0
 	public var name = ""
 	public var code = ""
@@ -25,46 +25,44 @@ public struct Country {
 	public var image: URL?
 	public var imagePath2: URL? //<- image_path_2
 	public var capitalTimeZone = Timezone()
-}
-
-extension Country: Serializable {
-    public init(dictionary: NSDictionary?) {
-        id              <== (self, dictionary, "id")
-        name            <== (self, dictionary, "name")
-        code            <== (self, dictionary, "code")
-        codeIso         <== (self, dictionary, "code_iso")
-        native          <== (self, dictionary, "native")
-        phone           <== (self, dictionary, "phone")
-        continent       <== (self, dictionary, "continent")
-        capital         <== (self, dictionary, "capital")
-        capitalLat      <== (self, dictionary, "capital_lat")
-        capitalLng      <== (self, dictionary, "capital_lng")
-        currency        <== (self, dictionary, "currency")
-        currencyName    <== (self, dictionary, "currency_name")
-        languages       <== (self, dictionary, "languages")
-        image           <== (self, dictionary, "image")
-        imagePath2      <== (self, dictionary, "image_path_2")
-        capitalTimeZone <== (self, dictionary, "capital_time_zone")
+    
+    init(from decoder: Decoder) throws {
+        let map = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try map.decode(Int.self, forKey: .id)
+        self.name = try map.decode(String.self, forKey: .name)
+        self.code = try map.decode(String.self, forKey: .code)
+        self.codeIso = try map.decode(String.self, forKey: .codeIso)
+        self.native = try map.decode(String.self, forKey: .native)
+        self.phone = try map.decode(Int.self, forKey: .phone)
+        self.continent = try map.decode(String.self, forKey: .continent)
+        self.capital = try map.decode(String.self, forKey: .capital)
+        self.capitalLat = try map.decode(Double.self, forKey: .capitalLat)
+        self.capitalLng = try map.decode(Double.self, forKey: .capitalLng)
+        self.currency = try map.decode(String.self, forKey: .currency)
+        self.currencyName = try map.decode(String.self, forKey: .currencyName)
+        self.languages = try map.decode(String.self, forKey: .languages)
+        self.image = try map.decode(URL.self, forKey: .image)
+        self.imagePath2 = try map.decode(URL.self, forKey: .imagePath2)
+        self.capitalTimeZone = try map.decode(Timezone.self, forKey: .capitalTimeZone)
     }
-
-    public func encodableRepresentation() -> NSCoding {
-        let dict = NSMutableDictionary()
-        (dict, "id")                <== id
-        (dict, "name")              <== name
-        (dict, "code")              <== code
-        (dict, "code_iso")          <== codeIso
-        (dict, "native")            <== native
-        (dict, "phone")             <== phone
-        (dict, "continent")         <== continent
-        (dict, "capital")           <== capital
-        (dict, "capital_lat")       <== capitalLat
-        (dict, "capital_lng")       <== capitalLng
-        (dict, "currency")          <== currency
-        (dict, "currency_name")     <== currencyName
-        (dict, "languages")         <== languages
-        (dict, "image")             <== image
-        (dict, "image_path_2")      <== imagePath2
-        (dict, "capital_time_zone") <== capitalTimeZone
-        return dict
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case codeIso = "code_iso"
+        case code
+        case native
+        case phone
+        case continent
+        case capital
+        case capitalLat = "capital_lat"
+        case capitalLng = "capital_lng"
+        case currency
+        case currencyName = "currency_name"
+        case languages
+        case image
+        case imagePath2 = "image_path_2"
+        case capitalTimeZone = "capital_time_zone"
     }
 }
+
