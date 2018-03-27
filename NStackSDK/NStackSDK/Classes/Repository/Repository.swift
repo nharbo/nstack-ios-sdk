@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import Alamofire
 
-typealias Completion<T> = ((DataResponse<T>) -> Void)
+typealias Completion<T> = ((DResult<T>) -> Void)
 
 // MARK: - App Open -
 

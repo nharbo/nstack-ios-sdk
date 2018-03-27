@@ -6,9 +6,7 @@
 //  Copyright © 2015 Nodes. All rights reserved.
 //
 import Foundation
-import Serpent
 import Cashier
-import Alamofire
 
 /// The Translations Manager handles everything related to translations.
 ///
@@ -62,15 +60,15 @@ public class TranslationManager {
     /// Otherwise, the effect will not be seen.
     public var languageOverride: Language? {
         get {
-            return store.serializableForKey(Constants.CacheKeys.languageOverride)
+            return store.object(forKey: Constants.CacheKeys.languageOverride)
         }
         set {
             if let newValue = newValue {
                 logger.logVerbose("Override language set to: \(newValue.locale)")
-                store.setSerializable(newValue, forKey: Constants.CacheKeys.languageOverride)
+                store.setObject(newValue, forKey: Constants.CacheKeys.languageOverride)
             } else {
                 logger.logVerbose("Override language deleted.")
-                store.deleteSerializableForKey(Constants.CacheKeys.languageOverride)
+                store.deleteObject(forKey: Constants.CacheKeys.languageOverride)
             }
             clearTranslations()
         }
@@ -130,8 +128,8 @@ public class TranslationManager {
     public func updateTranslations(_ completion: ((_ error: NStackError.Translations?) -> Void)? = nil) {
         logger.logVerbose("Starting translations update asynchronously.")
         repository.fetchTranslations(acceptLanguage: acceptLanguage) { response in
-            switch response.result {
-            case .success(let translationsData):
+            switch response {
+            case .success(let translationsData), .successWithError(let translationsData, _):
                 self.logger.logVerbose("New translations downloaded.")
                 
                 var languageChanged = false
@@ -164,7 +162,7 @@ public class TranslationManager {
     /// Gets the languages for which translations are available.
     ///
     /// - Parameter completion: An Alamofire DataResponse object containing the array or languages on success.
-    public func fetchAvailableLanguages(_ completion: @escaping (Alamofire.DataResponse<[Language]>) -> Void) {
+    public func fetchAvailableLanguages(_ completion: @escaping (DResult<[Language]>) -> Void) {
         logger.logVerbose("Fetching available language asynchronously.")
         repository.fetchAvailableLanguages(completion: completion)
     }
@@ -172,7 +170,7 @@ public class TranslationManager {
     /// Gets the language which is currently used for translations, based on the accept header.
     ///
     /// - Parameter completion: An Alamofire DataResponse object containing the language on success.
-    public func fetchCurrentLanguage(_ completion: @escaping (Alamofire.DataResponse<Language>) -> Void) {
+    public func fetchCurrentLanguage(_ completion: @escaping (DResult<Language>) -> Void) {
         logger.logVerbose("Fetching current language asynchronously.")
         repository.fetchCurrentLanguage(acceptLanguage: acceptLanguage, completion: completion)
     }

@@ -16,12 +16,12 @@ struct AppOpenResponse: Codable {
 
     init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
-        self.data = try map.decode(String.self, forKey: .data)
-        self.languageData = try map.decode(String.self, forKey: .languageData)
+        self.data = try? map.decode(AppOpenData.self, forKey: .data)
+        self.languageData = try? map.decode(LanguageData.self, forKey: .languageData)
     }
     
     private enum CodingKeys: String, CodingKey {
-        case id
+        case data
         case languageData = "meta"
     }
 }

@@ -21,7 +21,7 @@ internal struct Message: Codable {
     }
     
     private enum CodingKeys: String, CodingKey {
-        case count
+        case id
         case message
         case showSetting = "show_setting"
     }

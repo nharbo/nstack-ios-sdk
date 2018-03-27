@@ -8,8 +8,6 @@
 
 import Foundation
 import Cashier
-import Serpent
-import Alamofire
 
 public class NStack {
 

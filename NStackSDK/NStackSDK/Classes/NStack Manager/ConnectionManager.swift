@@ -7,19 +7,18 @@
 //
 
 import Foundation
-import Alamofire
-import Serpent
 import Cashier
 
 // FIXME: Figure out how to do accept language header properly
 
 final class ConnectionManager {
     let baseURL = "https://nstack.io/api/v1/"
-    let defaultUnwrapper: Parser.Unwrapper = { dict, _ in dict["data"] }
-    let passthroughUnwrapper: Parser.Unwrapper = { dict, _ in return dict }
 
-    let manager: SessionManager
     let configuration: APIConfiguration
+    
+    //URL Session
+    private var session: URLSession
+    private var component: URLComponents?
 
     var defaultHeaders: [String : String] {
         return [
@@ -29,10 +28,12 @@ final class ConnectionManager {
     }
 
     init(configuration: APIConfiguration) {
-        let sessionConfiguration = SessionManager.default.session.configuration
-        sessionConfiguration.timeoutIntervalForRequest = 20.0
-
-        self.manager = SessionManager(configuration: sessionConfiguration)
+        let config = URLSessionConfiguration.default
+        config.httpAdditionalHeaders = defaultHeaders
+        config.timeoutIntervalForRequest = 20
+        session = URLSession(configuration: config)
+        component = URLComponents(string: baseURL)
+        
         self.configuration = configuration
     }
 }
@@ -60,6 +61,15 @@ extension ConnectionManager: AppOpenRepository {
 
         let url = baseURL + "open" + (configuration.isFlat ? "?flat=true" : "")
 
+            //        guard var component = component,
+            //            let url = component.url?.appendingPathComponent("open" + (configuration.isFlat ? "?flat=true" : ""))
+            //        else {
+            //            print("failed in bulding appOpen url")
+            //            return
+            //        }
+            //
+            //        let dataTask =
+        
         manager
             .request(url, method: .post, parameters: params, headers: headers)
             .responseJSON(completionHandler: completion)

@@ -23,7 +23,7 @@ public struct IPAddress: Codable {
     public var type = ""
     public var requestedIp = ""
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.ipStart = try map.decode(String.self, forKey: .ipStart)
         self.ipEnd = try map.decode(String.self, forKey: .ipEnd)
@@ -50,6 +50,7 @@ public struct IPAddress: Codable {
         case lng = "lng"
         case timeZoneOffset = "time_zone_offset"
         case timeZoneName = "time_zone_name"
+        case ispName = "isp_name"
         case connectionType = "connection_type"
         case type = "type"
         case requestedIp = "requested_ip"
