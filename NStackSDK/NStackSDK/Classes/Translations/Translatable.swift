@@ -11,4 +11,4 @@ import Foundation
 public protocol Translatable: Codable {
 }
 
-struct Transtlations: Translatable {}
+public struct Transtlations: Translatable {}

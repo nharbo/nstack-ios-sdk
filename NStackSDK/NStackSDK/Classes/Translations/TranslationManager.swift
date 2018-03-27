@@ -19,7 +19,7 @@ public class TranslationManager {
     let repository: TranslationsRepository
     
     /// The translations object type.
-    let translationsType: Translatable.Type
+    let translationsType: Transtlations.Type
     
     /// Persistent store to use to store information.
     let store: NOPersistentStore
@@ -31,7 +31,7 @@ public class TranslationManager {
     let logger: LoggerType
     
     /// In memory cache of the translations object.
-    var translationsObject: Translatable?
+    var translationsObject: Transtlations?
     
     /// In memory cache of the last language object.
     public fileprivate(set) var currentLanguage: Language?
@@ -83,7 +83,7 @@ public class TranslationManager {
     /// - Parameters:
     ///   - translationsType: The type of the translations object that should be used.
     ///   - repository: Repository that can provide translations.
-    internal init(translationsType: Translatable.Type,
+    internal init(translationsType: Transtlations.Type,
                   repository: TranslationsRepository,
                   logger: LoggerType,
                   store: NOPersistentStore = Constants.persistentStore,
@@ -272,7 +272,7 @@ public class TranslationManager {
             print("failed to get data in loadTranslations")
             return
         }
-        let translations = try? JSONDecoder().decode(Translations.self, from: data)
+        let translations = try? JSONDecoder().decode(Transtlations.self, from: data)
         //let translations = translationsType.init(dictionary: parsed)
         translationsObject = translations
     }

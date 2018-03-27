@@ -430,13 +430,9 @@ public extension NStack {
     
     private func handle(_ response: DResult<[String: Any]>, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
         switch response {
-        case .success(let data):
-            guard let sourceDictionary = data as? [String: Any] else {
-                completion(nil, NStackError.Manager.parsing(reason: "No data found using the default or specified unwrapper"))
-                return
-            }
+        case .success(let sourceDictionary):
             if let key = key {
-                if let unwrappedDict = sourceDictionary as? [String: Any], let value = unwrappedDict[key] {
+                if let value = sourceDictionary[key] {
                     completion(value, nil)
                 } else {
                     completion(nil, NStackError.Manager.parsing(reason: "No data found for specified key"))
@@ -446,13 +442,9 @@ public extension NStack {
             }
         case let .failure(error):
             completion(nil,error)
-        case .successWithError(let data, let error):
-            guard let sourceDictionary = data as? [String: Any] else {
-                completion(nil, NStackError.Manager.parsing(reason: "No data found using the default or specified unwrapper"))
-                return
-            }
+        case .successWithError(let sourceDictionary, let error):
             if let key = key {
-                if let unwrappedDict = sourceDictionary as? [String: Any], let value = unwrappedDict[key] {
+                if let value = sourceDictionary[key] {
                     completion(value, error)
                 } else {
                     completion(nil, NStackError.Manager.parsing(reason: "No data found for specified key"))

@@ -21,7 +21,7 @@ public struct Configuration {
 
     public let appId: String
     public let restAPIKey: String
-    public let translationsClass: Translatable.Type?
+    public let translationsClass: Transtlations.Type?
     public var updateOptions: UpdateOptions = [.onStart, .onDidBecomeActive]
     public var verboseMode = false
     public var flat = false
@@ -45,7 +45,7 @@ public struct Configuration {
 
     public init(appId: String,
                 restAPIKey: String,
-                translationsClass: Translatable.Type? = nil,
+                translationsClass: Transtlations.Type? = nil,
                 flatTranslations: Bool = false) {
         self.appId = appId
         self.restAPIKey = restAPIKey
@@ -53,7 +53,7 @@ public struct Configuration {
         self.flat = flatTranslations
     }
 
-    public init(plistName: String, translationsClass: Translatable.Type? = nil) {
+    public init(plistName: String, translationsClass: Transtlations.Type? = nil) {
         var appId: String?
         var restAPIKey: String?
         var flatString: String?
