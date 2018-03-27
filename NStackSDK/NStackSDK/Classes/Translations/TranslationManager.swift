@@ -60,7 +60,7 @@ public class TranslationManager {
     /// Otherwise, the effect will not be seen.
     public var languageOverride: Language? {
         get {
-            return store.object(forKey: Constants.CacheKeys.languageOverride)
+            return store.object(forKey: Constants.CacheKeys.languageOverride) as? Language
         }
         set {
             if let newValue = newValue {
@@ -112,8 +112,11 @@ public class TranslationManager {
             loadTranslations()
         }
         
-        let dictionary = translationsObject?.encodableRepresentation() as? NSDictionary
-        return dictionary?.value(forKeyPath: keyPath) as? String
+        guard let data = try? JSONEncoder().encode(translationsObject), let dictionary = try? JSONDecoder().decode([String: Any].self, from: data) else {
+            print("failed to get dictionary in translationString")
+            return nil
+        }
+        return dictionary[keyPath] as? String
     }
 
     // MARK: - Update & Fetch -
@@ -150,9 +153,10 @@ public class TranslationManager {
                 }
                 
             case .failure(let error):
+                //TODO:
                 self.logger.logError("Error downloading translations data.\n",
-                                     "Response: ", response.response ?? "No response", "\n",
-                                     "Data: ", response.data ?? "No data", "\n",
+                                     "Response: ", "TODO: ADD RESPONSE", "\n",
+                                     "Data: ", "No data", "\n",
                                      "Error: ", error.localizedDescription)
                 completion?(.updateFailed(reason: error.localizedDescription))
             }
@@ -264,7 +268,12 @@ public class TranslationManager {
 
         // Figure out and set translations
         let parsed = processAllTranslations(dictionary)
-        let translations = translationsType.init(dictionary: parsed)
+        guard let data = try? JSONEncoder().encode(parsed) else {
+            print("failed to get data in loadTranslations")
+            return
+        }
+        let translations = try? JSONDecoder().decode(Translations.self, from: data)
+        //let translations = translationsType.init(dictionary: parsed)
         translationsObject = translations
     }
     
@@ -274,7 +283,7 @@ public class TranslationManager {
     ///
     /// - Parameter translations: The new translations.
     func set(response: TranslationsResponse?) {
-        guard let dictionary = response?.encodableRepresentation() as? NSDictionary else {
+        guard let data = try? JSONEncoder().encode(response), let dictionary = try? JSONDecoder().decode([String: Any].self, from: data) else {
             logger.logError("Failed to create dicitonary from translations API response.")
             return
         }
@@ -287,19 +296,19 @@ public class TranslationManager {
     }
     
     /// Returns the saved dictionary representation of the translations.
-    var translationsDictionary: NSDictionary {
+    var translationsDictionary: [String: Any] {
         return persistedTranslations ?? fallbackTranslations
     }
     
     /// Translations that were downloaded and persisted on disk.
-    var persistedTranslations: NSDictionary? {
+    var persistedTranslations: [String: Any]? {
         get {
             logger.logVerbose("Getting persisted traslations.")
             guard let url = translationsFileUrl else {
                 logger.logWarning("No persisted translations available, returing nil.")
                 return nil
             }
-            return NSDictionary(contentsOf: url)
+            return NSDictionary(contentsOf: url) as? [String: Any]
         }
         set {
             guard let translationsFileUrl = translationsFileUrl else {
@@ -325,7 +334,7 @@ public class TranslationManager {
             
             // Save to disk
             var url = translationsFileUrl
-            guard newValue.write(to: url, atomically: true) else {
+            guard (newValue as NSDictionary).write(to: url, atomically: true) else {
                 logger.logError("Failed to persist translations to disk.")
                 return
             }
@@ -349,7 +358,7 @@ public class TranslationManager {
     /// and the right one is chosen based on the current locale.
     ///
     /// - Returns: A dictionary representation of the selected local translations set.
-    var fallbackTranslations: NSDictionary {
+    var fallbackTranslations: [String: Any] {
         for bundle in repository.fetchBundles() {
             guard let filePath = bundle.path(forResource: "Translations", ofType: "json") else {
                 logger.logWarning("Bundle did not contain Translations.json file: " +
@@ -372,8 +381,8 @@ public class TranslationManager {
             do {
                 logger.logVerbose("Converting loaded file to JSON object.")
                 let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
-                guard let dictionary = json as? NSDictionary else {
-                    logger.logError("Failed to get NSDictionary from fallback JSON file.")
+                guard let dictionary = json as? [String: Any] else {
+                    logger.logError("Failed to get [String: Any] from fallback JSON file.")
                     continue
                 }
                 
@@ -395,10 +404,10 @@ public class TranslationManager {
     ///
     /// - Parameter dictionary: Dictionary containing all translations under the `data` key.
     /// - Returns: Returns extracted language dictioanry for current accept language.
-    func processAllTranslations(_ dictionary: NSDictionary) -> NSDictionary? {
+    func processAllTranslations(_ dictionary: [String: Any]) -> [String: Any]? {
         logger.logVerbose("Processing translations dictionary.")
-        guard let translations = dictionary.value(forKey: "data") as? NSDictionary else {
-            logger.logError("Failed to get data from all translations NSDictionary. \(dictionary)")
+        guard let translations = dictionary["data"] as? [String: Any] else {
+            logger.logError("Failed to get data from all translations [String: Any]. \(dictionary)")
             return nil
         }
         
@@ -410,15 +419,15 @@ public class TranslationManager {
     ///
     /// - Parameter dictionary: Dictionary containing all translations under the `meta` key.
     /// - Returns: Returns extracted language for last language.
-    func processLanguage(_ dictionary: NSDictionary) -> Language? {
+    func processLanguage(_ dictionary: [String: Any]) -> Language? {
         logger.logVerbose("Processing language dictionary.")
-        guard let meta = dictionary.value(forKey: "meta") as? NSDictionary else {
-            logger.logError("Failed to get meta from all translations NSDictionary. \(dictionary)")
+        guard let meta = dictionary["meta"] as? [String: Any] else {
+            logger.logError("Failed to get meta from all translations [String: Any]. \(dictionary)")
             return nil
         }
         
-        guard let language = meta.value(forKey: "language") as? NSDictionary else {
-            logger.logError("Failed to get language from all meta NSDictionary. \(meta)")
+        guard let language = meta["language"] as? [String: Any] else {
+            logger.logError("Failed to get language from all meta [String: Any]. \(meta)")
             return nil
         }
         
@@ -429,9 +438,9 @@ public class TranslationManager {
     ///
     /// - Parameter json: A dictionary containing translation sets by language code key.
     /// - Returns: A translations set as a dictionary.
-    func extractLanguageDictionary(fromDictionary dictionary: NSDictionary) -> NSDictionary {
+    func extractLanguageDictionary(fromDictionary dictionary: [String: Any]) -> [String: Any] {
         logger.logVerbose("Extracting language dictionary.")
-        var languageDictionary: NSDictionary? = nil
+        var languageDictionary: [String: Any]? = nil
         
         // First try overriden language
         if let languageOverride = languageOverride {
@@ -456,7 +465,7 @@ public class TranslationManager {
         // Find matching language and region
         for lan in languages {
             // Try matching on both language and region
-            if let dictionary = dictionary.value(forKey: lan) as? NSDictionary {
+            if let dictionary = dictionary[lan] as? [String: Any] {
                 logger.logVerbose("Found matching language for language with region: " + lan)
                 return dictionary
             }
@@ -474,8 +483,8 @@ public class TranslationManager {
             }
         }
         
-        logger.logWarning("Falling back to first language in dictionary: \(dictionary.allKeys.first ?? "None")")
-        languageDictionary = dictionary.allValues.first as? NSDictionary
+        logger.logWarning("Falling back to first language in dictionary: \(dictionary.keys.first ?? "None")")
+        languageDictionary = dictionary.values.first as? [String: Any]
         
         if let languageDictionary = languageDictionary {
             return languageDictionary
@@ -491,7 +500,7 @@ public class TranslationManager {
     ///   - language: The desired language. If `nil`, first language will be used.
     ///   - json: The dictionary containing translations for all languages.
     /// - Returns: Translations dictionary for the given language.
-    func translationsMatching(language: Language, inDictionary dictionary: NSDictionary) -> NSDictionary? {
+    func translationsMatching(language: Language, inDictionary dictionary: [String: Any]) -> [String: Any]? {
         return translationsMatching(locale: language.locale, inDictionary: dictionary)
     }
     
@@ -501,16 +510,16 @@ public class TranslationManager {
     ///   - locale: A language code of the desired language.
     ///   - json: The dictionary containing translations for all languages.
     /// - Returns: Translations dictionary for the given language.
-    func translationsMatching(locale: String, inDictionary dictionary: NSDictionary) -> NSDictionary? {
+    func translationsMatching(locale: String, inDictionary dictionary: [String: Any]) -> [String: Any]? {
         // If we have perfect match on language and region
-        if let dictionary = dictionary.value(forKey: locale) as? NSDictionary {
+        if let dictionary = dictionary[locale] as? [String: Any] {
             return dictionary
         }
         
         // Try shortening keys in dictionary
-        for case let key as String in dictionary.allKeys {
+        for case let key as String in dictionary.keys {
             if key.substring(to: 2) == locale {
-                return dictionary.value(forKey: key) as? NSDictionary
+                return dictionary[key] as? [String: Any]
             }
         }
         

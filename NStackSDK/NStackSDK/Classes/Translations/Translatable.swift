@@ -8,4 +8,7 @@
 
 import Foundation
 
-public protocol Translatable: Codable {}
+public protocol Translatable: Codable {
+}
+
+struct Transtlations: Translatable {}

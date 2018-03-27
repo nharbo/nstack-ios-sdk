@@ -15,7 +15,9 @@ public struct Timezone : Codable {
 	public var offsetSec = 0
 	public var label = ""
     
-    init(from decoder: Decoder) throws {
+    public init() {}
+    
+    public init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try map.decode(Int.self, forKey: .id)
         self.name = try map.decode(String.self, forKey: .name)

@@ -15,6 +15,14 @@ public struct Language: Codable {
     public var direction = ""
     public var acceptLanguage = "" // <-Accept-Language
     
+    init(dictionary: [String: Any]) {
+        self.id = dictionary["id"] as! Int
+        self.name = dictionary["name"] as! String
+        self.locale = dictionary["locale"] as! String
+        self.direction = dictionary["direction"] as! String
+        self.acceptLanguage = dictionary["Accept-Language"] as! String
+    }
+    
     public init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try map.decode(Int.self, forKey: .id)

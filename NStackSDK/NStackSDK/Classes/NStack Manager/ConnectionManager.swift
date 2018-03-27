@@ -28,25 +28,28 @@ final class ConnectionManager {
     }
 
     init(configuration: APIConfiguration) {
+        self.configuration = configuration
+        
         let config = URLSessionConfiguration.default
-        config.httpAdditionalHeaders = defaultHeaders
+        config.httpAdditionalHeaders = [
+            "X-Application-id"  : configuration.appId,
+            "X-Rest-Api-Key"    : configuration.restAPIKey,
+        ]
         config.timeoutIntervalForRequest = 20
         session = URLSession(configuration: config)
         component = URLComponents(string: baseURL)
-        
-        self.configuration = configuration
     }
 }
 
 extension ConnectionManager: AppOpenRepository {
     func postAppOpen(oldVersion: String = VersionUtilities.previousAppVersion,
                      currentVersion: String = VersionUtilities.currentAppVersion,
-                     acceptLanguage: String? = nil, completion: @escaping Completion<Any>) {
+                     acceptLanguage: String? = nil, completion: @escaping Completion<[String: Any]>) {
         var params: [String : Any] = [
             "version"           : currentVersion,
             "guid"              : Configuration.guid,
             "platform"          : "ios",
-            "last_updated"      : ConnectionManager.lastUpdatedString,
+            "last_updated"      : ConnectionManager.lastUpdatedString,   
             "old_version"       : oldVersion
         ]
 
@@ -59,20 +62,21 @@ extension ConnectionManager: AppOpenRepository {
             headers["Accept-Language"] = acceptLanguage
         }
 
-        let url = baseURL + "open" + (configuration.isFlat ? "?flat=true" : "")
-
-            //        guard var component = component,
-            //            let url = component.url?.appendingPathComponent("open" + (configuration.isFlat ? "?flat=true" : ""))
-            //        else {
-            //            print("failed in bulding appOpen url")
-            //            return
-            //        }
-            //
-            //        let dataTask =
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("open" + (configuration.isFlat ? "?flat=true" : ""))
+            else {
+                print("failed in bulding appOpen url")
+                return
+        }
         
-        manager
-            .request(url, method: .post, parameters: params, headers: headers)
-            .responseJSON(completionHandler: completion)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
+
     }
 }
 
@@ -84,14 +88,23 @@ extension ConnectionManager: TranslationsRepository {
             "last_updated"      : ConnectionManager.lastUpdatedString
         ]
 
-        let url = baseURL + "translate/mobile/keys?all=true" + (configuration.isFlat ? "&flat=true" : "")
-
         var headers = defaultHeaders
         headers["Accept-Language"] = acceptLanguage
 
-        manager
-            .request(url, method: .get, parameters:params, headers: headers)
-            .responseSerializable(completion, unwrapper: passthroughUnwrapper)
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("translate/mobile/keys?all=true" + (configuration.isFlat ? "&flat=true" : ""))
+            else {
+                print("failed in bulding fetchTranslations url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 
     func fetchCurrentLanguage(acceptLanguage: String,
@@ -101,26 +114,44 @@ extension ConnectionManager: TranslationsRepository {
             "last_updated"      : ConnectionManager.lastUpdatedString
         ]
 
-        let url = baseURL + "translate/mobile/languages/best_fit?show_inactive_languages=true"
-
         var headers = defaultHeaders
         headers["Accept-Language"] = acceptLanguage
 
-        manager
-            .request(url, method: .get, parameters: params, headers: headers)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("translate/mobile/languages/best_fit?show_inactive_languages=true")
+            else {
+                print("failed in bulding fetchCurrentLanguage url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 
     func fetchAvailableLanguages(completion:  @escaping Completion<[Language]>) {
         let params: [String : Any] = [
             "guid"              : Configuration.guid,
         ]
-
-        let url = baseURL + "translate/mobile/languages"
-
-        manager
-            .request(url, method: .get, parameters:params, headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("translate/mobile/languages")
+            else {
+                print("failed in bulding fetchCurrentLanguage url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = defaultHeaders
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 
     func fetchPreferredLanguages() -> [String] {
@@ -143,10 +174,20 @@ extension ConnectionManager: UpdatesRepository {
             "old_version"       : oldVersion,
             ]
 
-        let url = baseURL + "notify/updates"
-        manager
-            .request(url, method: .get, parameters:params, headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("notify/updates")
+            else {
+                print("failed in bulding fetchUpdates url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = defaultHeaders
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 }
 
@@ -159,8 +200,20 @@ extension ConnectionManager: VersionsRepository {
             "answer"            : "no",
         ]
 
-        let url = baseURL + "notify/updates/views"
-        manager.request(url, method: .post, parameters:params, headers: defaultHeaders)
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("notify/updates/views")
+            else {
+                print("failed in bulding markWhatsNewAsSeen url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.allHTTPHeaderFields = defaultHeaders
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest)
+        dataTask.resume()
     }
 
     func markMessageAsRead(_ id: String) {
@@ -168,9 +221,21 @@ extension ConnectionManager: VersionsRepository {
             "guid"              : Configuration.guid,
             "message_id"        : id
         ]
-
-        let url = baseURL + "notify/messages/views"
-        manager.request(url, method: .post, parameters:params, headers: defaultHeaders)
+        
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("notify/messages/views")
+            else {
+                print("failed in bulding markMessageAsRead url")
+                return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.allHTTPHeaderFields = defaultHeaders
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        let dataTask = session.dataTask(with: urlRequest)
+        dataTask.resume()
     }
 
     #if os(iOS) || os(tvOS)
@@ -181,8 +246,21 @@ extension ConnectionManager: VersionsRepository {
             "answer"            : answer.rawValue
         ]
 
-        let url = baseURL + "notify/rate_reminder/views"
-        manager.request(url, method: .post, parameters:params, headers: defaultHeaders)
+    
+        guard let component = component,
+            let url = component.url?.appendingPathComponent("notify/rate_reminder/views")
+        else {
+            print("failed in bulding markRateReminderAsSeen url")
+            return
+        }
+    
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.allHTTPHeaderFields = defaultHeaders
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+    
+        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     #endif
 }
@@ -191,39 +269,46 @@ extension ConnectionManager: VersionsRepository {
 
 extension ConnectionManager: GeographyRepository {
     func fetchContinents(completion: @escaping Completion<[Continent]>) {
-        manager
-            .request(baseURL + "geographic/continents", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/continents") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
     func fetchLanguages(completion: @escaping Completion<[Language]>) {
-        manager
-            .request(baseURL + "geographic/languages", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/languages") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
     func fetchTimeZones(completion: @escaping Completion<[Timezone]>) {
-        manager
-            .request(baseURL + "geographic/time_zones", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/time_zones") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
     func fetchTimeZone(lat: Double, lng: Double, completion: @escaping Completion<Timezone>) {
-        manager
-            .request(baseURL + "geographic/time_zones/by_lat_lng?lat_lng=\(String(lat)),\(String(lng))", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/time_zones/by_lat_lng?lat_lng=\(String(lat)),\(String(lng))")
+            else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
     func fetchIPDetails(completion: @escaping Completion<IPAddress>) {
-        manager
-            .request(baseURL + "geographic/ip-address", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/ip-address") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
     func fetchCountries(completion:  @escaping Completion<[Country]>) {
-        manager
-            .request(baseURL + "geographic/countries", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("geographic/countries") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 }
 
@@ -231,27 +316,28 @@ extension ConnectionManager: GeographyRepository {
 
 extension ConnectionManager: ValidationRepository {
     func validateEmail(_ email: String, completion:  @escaping Completion<Validation>) {
-        manager
-            .request(baseURL + "validator/email?email=\(email)", headers: defaultHeaders)
-            .responseSerializable(completion, unwrapper: defaultUnwrapper)
+        guard let component = component, let url = component.url?.appendingPathComponent("validator/email?email=\(email)") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 }
 
 // MARK: - Content -
 
 extension ConnectionManager: ContentRepository {
-    func fetchContent(_ id: Int, completion: @escaping Completion<Any>) {
-        manager
-            .request(baseURL + "content/responses/\(id)", headers: defaultHeaders)
-            .validate()
-            .responseJSON(completionHandler: completion)
+    func fetchContent(_ id: Int, completion: @escaping Completion<[String: Any]>) {
+        guard let component = component, let url = component.url?.appendingPathComponent("content/responses/\(id)") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
     
-    func fetchContent(_ slug: String, completion: @escaping Completion<Any>) {
-        manager
-            .request(baseURL + "content/responses/\(slug)", headers: defaultHeaders)
-            .validate()
-            .responseJSON(completionHandler: completion)
+    func fetchContent(_ slug: String, completion: @escaping Completion<[String: Any]>) {
+        guard let component = component, let url = component.url?.appendingPathComponent("content/responses/\(slug)") else { return }
+        
+        let dataTask = session.dataTask(with: url, completionHandler: session.decode(completion))
+        dataTask.resume()
     }
 }
 

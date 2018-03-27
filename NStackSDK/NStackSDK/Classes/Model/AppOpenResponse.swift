@@ -13,6 +13,11 @@ import Foundation
 struct AppOpenResponse: Codable {
     var data: AppOpenData?
     var languageData: LanguageData? // <-meta
+    
+    init(dictionary: [String: Any]) {
+        data = dictionary["data"] as? AppOpenData
+        languageData = dictionary["meta"] as? LanguageData
+    }
 
     init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)

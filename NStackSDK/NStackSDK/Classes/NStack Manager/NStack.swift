@@ -151,15 +151,8 @@ public class NStack {
         // FIXME: Refactor
 
         connectionManager.postAppOpen(completion: { response in
-            switch response.result {
-            case .success(let JSONdata):
-                guard let dictionary = JSONdata as? NSDictionary else {
-                    self.logger.log("Failure: couldn't parse response. Response data: \(JSONdata)",
-                        level: .error)
-                    completion?(.updateFailed(reason: "Couldn't parse response dictionary."))
-                    return
-                }
-
+            switch response {
+            case .success(let dictionary):
                 let wrapper = AppOpenResponse(dictionary: dictionary)
 
 
@@ -194,8 +187,11 @@ public class NStack {
 
                 self.connectionManager.setLastUpdated()
 
+            case .successWithError(let dictionary, let error):
+                //TODO: do this
+                break
             case let .failure(error):
-                self.logger.log("Failure: \(response.response?.description ?? "unknown error")", level: .error)
+                self.logger.log("Failure: \(response)", level: .error)
                 completion?(.updateFailed(reason: error.localizedDescription))
             }
         })
@@ -216,11 +212,13 @@ public extension NStack {
     /// - Parameter completion: Completion block when the API call has finished.
     public func ipDetails(completion: @escaping ((_ ipDetails: IPAddress?, _ error: Error?) -> ())) {
         connectionManager.fetchIPDetails { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 completion(data, nil)
             case .failure(let error):
                 completion(nil, error)
+            case .successWithError(let data, let error):
+                completion(data, error)
             }
         }
     }
@@ -232,12 +230,14 @@ public extension NStack {
     /// - Parameter completion: Optional completion block when the API call has finished.
     public func updateCountries(completion: ((_ countries: [Country], _ error: Error?) -> ())? = nil) {
         connectionManager.fetchCountries { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 self.countries = data
                 completion?(data, nil)
             case .failure(let error):
                 completion?([], error)
+            case .successWithError(let data, let error):
+                completion?(data, error)
             }
         }
     }
@@ -245,14 +245,14 @@ public extension NStack {
     /// Locally stored list of countries
     public private(set) var countries: [Country]? {
         get {
-            return Constants.persistentStore.serializableForKey(Constants.CacheKeys.countries)
+            return Constants.persistentStore.object(forKey: Constants.CacheKeys.countries) as? [Country]
         }
         set {
             guard let newValue = newValue else {
-                Constants.persistentStore.deleteSerializableForKey(Constants.CacheKeys.countries, purgeMemoryCache: true)
+                Constants.persistentStore.deleteObject(forKey: Constants.CacheKeys.countries)
                 return
             }
-            Constants.persistentStore.setSerializable(newValue, forKey: Constants.CacheKeys.countries)
+            Constants.persistentStore.setObject(newValue, forKey: Constants.CacheKeys.countries)
         }
     }
     
@@ -263,12 +263,14 @@ public extension NStack {
     /// - Parameter completion: Optional completion block when the API call has finished.
     public func updateContinents(completion: ((_ continents: [Continent], _ error: Error?) -> ())? = nil) {
         connectionManager.fetchContinents { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 self.continents = data
                 completion?(data, nil)
             case .failure(let error):
                 completion?([], error)
+            case .successWithError(let data, let error):
+                completion?(data, error)
             }
         }
     }
@@ -276,14 +278,14 @@ public extension NStack {
     /// Locally stored list of continents
     public private(set) var continents: [Continent]? {
         get {
-            return Constants.persistentStore.serializableForKey(Constants.CacheKeys.continents)
+            return Constants.persistentStore.object(forKey: Constants.CacheKeys.continents) as? [Continent]
         }
         set {
             guard let newValue = newValue else {
-                Constants.persistentStore.deleteSerializableForKey(Constants.CacheKeys.continents, purgeMemoryCache: true)
+                Constants.persistentStore.deleteObject(forKey: Constants.CacheKeys.continents)
                 return
             }
-            Constants.persistentStore.setSerializable(newValue, forKey: Constants.CacheKeys.continents)
+            Constants.persistentStore.setObject(newValue, forKey: Constants.CacheKeys.continents)
         }
     }
     
@@ -294,12 +296,14 @@ public extension NStack {
     /// - Parameter completion: Optional completion block when the API call has finished.
     public func updateLanguages(completion: ((_ countries: [Language], _ error: Error?) -> ())? = nil) {
         connectionManager.fetchLanguages { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 self.languages = data
                 completion?(data, nil)
             case .failure(let error):
                 completion?([], error)
+            case .successWithError(let data, let error):
+                completion?(data, error)
             }
         }
     }
@@ -307,14 +311,14 @@ public extension NStack {
     /// Locally stored list of languages
     public private(set) var languages: [Language]? {
         get {
-            return Constants.persistentStore.serializableForKey(Constants.CacheKeys.languanges)
+            return Constants.persistentStore.object(forKey: Constants.CacheKeys.languanges) as? [Language]
         }
         set {
             guard let newValue = newValue else {
-                Constants.persistentStore.deleteSerializableForKey(Constants.CacheKeys.languanges, purgeMemoryCache: true)
+                Constants.persistentStore.deleteObject(forKey: Constants.CacheKeys.languanges)
                 return
             }
-            Constants.persistentStore.setSerializable(newValue, forKey: Constants.CacheKeys.languanges)
+            Constants.persistentStore.setObject(newValue, forKey: Constants.CacheKeys.languanges)
         }
     }
     
@@ -325,12 +329,14 @@ public extension NStack {
     /// - Parameter completion: Optional completion block when the API call has finished.
     public func updateTimezones(completion: ((_ countries: [Timezone], _ error: Error?) -> ())? = nil) {
         connectionManager.fetchTimeZones { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 self.timezones = data
                 completion?(data, nil)
             case .failure(let error):
                 completion?([], error)
+            case .successWithError(let data, let error):
+                completion?(data, error)
             }
         }
     }
@@ -338,14 +344,14 @@ public extension NStack {
     /// Locally stored list of timezones
     public private(set) var timezones: [Timezone]? {
         get {
-            return Constants.persistentStore.serializableForKey(Constants.CacheKeys.timezones)
+            return Constants.persistentStore.object(forKey: Constants.CacheKeys.timezones) as? [Timezone]
         }
         set {
             guard let newValue = newValue else {
-                Constants.persistentStore.deleteSerializableForKey(Constants.CacheKeys.timezones, purgeMemoryCache: true)
+                Constants.persistentStore.deleteObject(forKey: Constants.CacheKeys.timezones)
                 return
             }
-            Constants.persistentStore.setSerializable(newValue, forKey: Constants.CacheKeys.timezones)
+            Constants.persistentStore.setObject(newValue, forKey: Constants.CacheKeys.timezones)
         }
     }
     
@@ -357,11 +363,13 @@ public extension NStack {
     ///     completion: Completion block when the API call has finished.
     public func timezone(lat: Double, lng: Double, completion: @escaping ((_ timezone: Timezone?, _ error: Error?) -> ())) {
         connectionManager.fetchTimeZone(lat: lat, lng: lng) { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 completion(data, nil)
             case .failure(let error):
                 completion(nil, error)
+            case .successWithError(let data, let error):
+                completion(data, error)
             }
         }
     }
@@ -378,11 +386,13 @@ public extension NStack {
     ///     completion: Completion block when the API call has finished.
     public func validateEmail(_ email:String, completion: @escaping ((_ valid: Bool, _ error: Error?) -> ())) {
         connectionManager.validateEmail(email) { (response) in
-            switch response.result {
+            switch response {
             case .success(let data):
                 completion(data.ok, nil)
             case .failure(let error):
                 completion(false,error)
+            case .successWithError(let data, let error):
+                completion(data.ok, error)
             }
         }
     }
@@ -399,9 +409,9 @@ public extension NStack {
     ///     unwrapper: Optional unwrapper where to look for the required data, default is in the data object
     ///     key: Optional string if only one property or object is required, default is nil
     ///     completion: Completion block with the response as a any object if successful or error if not
-    public func getContentResponse(_ id: Int, _ unwrapper: @escaping Parser.Unwrapper = { dict, _ in dict["data"] }, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
+    public func getContentResponse(_ id: Int, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
         connectionManager.fetchContent(id) { (response) in
-            self.handle(response, unwrapper, key: key, completion: completion)
+            self.handle(response, key: key, completion: completion)
         }
     }
     
@@ -412,30 +422,44 @@ public extension NStack {
     ///     unwrapper: Optional unwrapper where to look for the required data, default is in the data object
     ///     key: Optional string if only one property or object is required, default is nil
     ///     completion: Completion block with the response as a any object if successful or error if not
-    public func getContentResponse(_ slug: String, _ unwrapper: @escaping Parser.Unwrapper = { dict, _ in dict["data"] }, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
+    public func getContentResponse(_ slug: String, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
         connectionManager.fetchContent(slug) { (response) in
-            self.handle(response, unwrapper, key: key, completion: completion)
+            self.handle(response, key: key, completion: completion)
         }
     }
     
-    private func handle(_ response: DataResponse<Any>, _ unwrapper: Parser.Unwrapper, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
-        switch response.result {
+    private func handle(_ response: DResult<[String: Any]>, key: String? = nil, completion: @escaping ((_ response: Any?, _ error: Error?) -> ())) {
+        switch response {
         case .success(let data):
-            guard let sourceDictionary = data as? NSDictionary, let unwrappedAny = unwrapper(sourceDictionary, Any.self) else {
+            guard let sourceDictionary = data as? [String: Any] else {
                 completion(nil, NStackError.Manager.parsing(reason: "No data found using the default or specified unwrapper"))
                 return
             }
             if let key = key {
-                if let unwrappedDict = unwrappedAny as? NSDictionary, let value = unwrappedDict.object(forKey: key) {
+                if let unwrappedDict = sourceDictionary as? [String: Any], let value = unwrappedDict[key] {
                     completion(value, nil)
                 } else {
                     completion(nil, NStackError.Manager.parsing(reason: "No data found for specified key"))
                 }
             } else {
-                completion(unwrappedAny, nil)
+                completion(sourceDictionary, nil)
             }
         case let .failure(error):
             completion(nil,error)
+        case .successWithError(let data, let error):
+            guard let sourceDictionary = data as? [String: Any] else {
+                completion(nil, NStackError.Manager.parsing(reason: "No data found using the default or specified unwrapper"))
+                return
+            }
+            if let key = key {
+                if let unwrappedDict = sourceDictionary as? [String: Any], let value = unwrappedDict[key] {
+                    completion(value, error)
+                } else {
+                    completion(nil, NStackError.Manager.parsing(reason: "No data found for specified key"))
+                }
+            } else {
+                completion(sourceDictionary, error)
+            }
         }
     }
 }

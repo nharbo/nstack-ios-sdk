@@ -14,7 +14,7 @@ typealias Completion<T> = ((DResult<T>) -> Void)
 
 protocol AppOpenRepository {
     func postAppOpen(oldVersion: String, currentVersion: String, acceptLanguage: String?,
-                     completion: @escaping Completion<Any>)
+                     completion: @escaping Completion<[String: Any]>)
 }
 
 // MARK: - Updates -
@@ -54,8 +54,8 @@ protocol ValidationRepository {
 // MARK: - Content -
 
 protocol ContentRepository {
-    func fetchContent(_ id: Int, completion:  @escaping Completion<Any>)
-    func fetchContent(_ slug: String, completion: @escaping Completion<Any>)
+    func fetchContent(_ id: Int, completion:  @escaping Completion<[String: Any]>)
+    func fetchContent(_ slug: String, completion: @escaping Completion<[String: Any]>)
 }
 
 // MARK: - Versions -

@@ -72,7 +72,7 @@ extension Color: HexInitializable {
             return nil
         }
         
-        switch hex.characters.count {
+        switch hex.count {
         // RGB (12-bit)
         case 3:
             (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
@@ -90,23 +90,6 @@ extension Color: HexInitializable {
                          green: CGFloat(g) / 255,
                          blue: CGFloat(b) / 255,
                          alpha: CGFloat(a) / 255) as? T
-    }
-}
-
-// MARK: - Extensions -
-// MARK: SequenceType
-
-public extension Sequence where Iterator.Element:Encodable {
-    func encodableRepresentation() -> [NSCoding] {
-        return self.map { element in return element.encodableRepresentation() }
-    }
-}
-
-// MARK: RawRepresentable
-
-public extension RawRepresentable {
-    public func encodableRepresentation() -> RawValue {
-        return self.rawValue
     }
 }
 

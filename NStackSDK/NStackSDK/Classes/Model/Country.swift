@@ -24,9 +24,9 @@ public struct Country: Codable {
 	public var languages = ""
 	public var image: URL?
 	public var imagePath2: URL? //<- image_path_2
-	public var capitalTimeZone = Timezone()
+    public var capitalTimeZone = Timezone()
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try map.decode(Int.self, forKey: .id)
         self.name = try map.decode(String.self, forKey: .name)

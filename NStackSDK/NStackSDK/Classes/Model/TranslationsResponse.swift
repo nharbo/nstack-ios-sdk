@@ -8,15 +8,21 @@
 
 import Foundation
 
-struct TranslationsResponse {
-    var translations: NSDictionary? // <-data
+struct TranslationsResponse: Codable {
+    var translations: [String: Any]? // <-data
     var languageData: LanguageData? // <-meta
     
     
     init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
-        self.translations = try map.decode(String.self, forKey: .translations)
-        self.languageData = try map.decode(String.self, forKey: .languageData)
+        self.translations = try? map.decode([String: Any].self, forKey: .translations)
+        self.languageData = try? map.decode(LanguageData.self, forKey: .languageData)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var map = encoder.container(keyedBy: CodingKeys.self)
+        try? map.encode(translations, forKey: .translations)
+        try? map.encode(languageData, forKey: .languageData)
     }
     
     private enum CodingKeys: String, CodingKey {

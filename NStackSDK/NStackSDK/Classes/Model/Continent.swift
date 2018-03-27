@@ -14,7 +14,7 @@ public struct Continent: Codable {
     public var code = ""
     public var imageURL: URL? //<- image
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let map = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try map.decode(Int.self, forKey: .id)
         self.name = try map.decode(String.self, forKey: .name)
