@@ -259,7 +259,7 @@ extension ConnectionManager: VersionsRepository {
         urlRequest.allHTTPHeaderFields = defaultHeaders
         urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
     
-        let dataTask = session.dataTask(with: urlRequest, completionHandler: session.decode(completion))
+        let dataTask = session.dataTask(with: urlRequest)
         dataTask.resume()
     }
     #endif
