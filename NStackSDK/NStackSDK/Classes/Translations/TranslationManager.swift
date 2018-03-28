@@ -517,7 +517,7 @@ public class TranslationManager {
         }
         
         // Try shortening keys in dictionary
-        for case let key as String in dictionary.keys {
+        for case let key in dictionary.keys {
             if key.substring(to: 2) == locale {
                 return dictionary[key] as? [String: Any]
             }

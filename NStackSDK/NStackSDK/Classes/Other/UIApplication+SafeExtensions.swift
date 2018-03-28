@@ -12,7 +12,7 @@ import UIKit
 #if !os(watchOS)
 
 extension UIApplication {
-    class func safeSharedApplication() -> UIApplication? {
+    @objc class func safeSharedApplication() -> UIApplication? {
         guard UIApplication.responds(to: NSSelectorFromString("sharedApplication")),
             let unmanagedSharedApplication = UIApplication.perform(NSSelectorFromString("sharedApplication")) else {
                 return nil
@@ -21,7 +21,7 @@ extension UIApplication {
         return unmanagedSharedApplication.takeRetainedValue() as? UIApplication
     }
 
-    func safeOpenURL(_ url: URL) {
+    @objc func safeOpenURL(_ url: URL) {
         guard self.canOpenURL(url) else { return }
 
         guard let _ = self.perform(NSSelectorFromString("openURL:"), with: url) else {

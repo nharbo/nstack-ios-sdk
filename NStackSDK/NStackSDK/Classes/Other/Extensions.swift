@@ -9,7 +9,7 @@
 import Foundation
 
 extension FileManager {
-    var documentsDirectory: URL? {
+    @objc var documentsDirectory: URL? {
         return urls(for: .documentDirectory, in: .userDomainMask).first
     }
 }
