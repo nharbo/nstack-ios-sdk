@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/nodes-ios/NStackSDK.git', :tag => spec.version }
   spec.source_files = "NStackSDK/NStackSDK/Classes/**/*.{h,m,swift}"
   spec.framework    = 'SystemConfiguration'
-  spec.swift_version = '3.3'
+  spec.swift_version = '4.1'
   spec.platforms = { :ios => "8.0", :osx => "10.10", :watchos => "2.0", :tvos => "9.0" }
   spec.social_media_url   = "http://twitter.com/nodes_ios"
 
