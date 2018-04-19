@@ -8,6 +8,9 @@
 
 import Foundation
 
+public typealias GenericDictionary = [String : Decodable]
+
+
 // Decoded Result
 public enum DResult<Value> {
     case success(Value)
@@ -63,5 +66,7 @@ public extension URLSession {
             }
         }
     }
+    
+    
 }
 

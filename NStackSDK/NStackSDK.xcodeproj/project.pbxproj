@@ -126,6 +126,14 @@
 		33E2230F1FA9F5010013CCC3 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2230A1FA9F5010013CCC3 /* Continent.swift */; };
 		33E223101FA9F5010013CCC3 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2230A1FA9F5010013CCC3 /* Continent.swift */; };
 		33E223111FA9F5010013CCC3 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2230A1FA9F5010013CCC3 /* Continent.swift */; };
+		42A461D9207FABD3007FFD68 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A461D8207FABD3007FFD68 /* JSONType.swift */; };
+		42B6A1292080BF05006F1317 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */; };
+		42B6A12A2080BF09006F1317 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */; };
+		42B6A12B2080BF09006F1317 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */; };
+		42B6A12C2080BF0A006F1317 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */; };
+		42B6A12D2080BF0C006F1317 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A461D8207FABD3007FFD68 /* JSONType.swift */; };
+		42B6A12E2080BF0D006F1317 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A461D8207FABD3007FFD68 /* JSONType.swift */; };
+		42B6A12F2080BF0D006F1317 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A461D8207FABD3007FFD68 /* JSONType.swift */; };
 		42CA6D142064F4F3002FC169 /* URLSession+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA6D132064F4F3002FC169 /* URLSession+Codable.swift */; };
 		42CA6D152064F4FE002FC169 /* URLSession+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA6D132064F4F3002FC169 /* URLSession+Codable.swift */; };
 		42CA6D162064F4FF002FC169 /* URLSession+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA6D132064F4F3002FC169 /* URLSession+Codable.swift */; };
@@ -283,6 +291,8 @@
 		33E222ED1FA8C5280013CCC3 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Classes/Model/Validation.swift; sourceTree = "<group>"; };
 		33E223021FA9F4EA0013CCC3 /* IPAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IPAddress.swift; path = Classes/Model/IPAddress.swift; sourceTree = "<group>"; };
 		33E2230A1FA9F5010013CCC3 /* Continent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Continent.swift; path = Classes/Model/Continent.swift; sourceTree = "<group>"; };
+		42A461D8207FABD3007FFD68 /* JSONType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
+		42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
 		42CA6D132064F4F3002FC169 /* URLSession+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Codable.swift"; sourceTree = "<group>"; };
 		42DDB20D206A612B00A58997 /* Extention+StringInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+StringInitializable.swift"; sourceTree = "<group>"; };
 		82CB55491C8DEAC200389D2B /* AppOpenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppOpenResponse.swift; path = Classes/Model/AppOpenResponse.swift; sourceTree = "<group>"; };
@@ -466,6 +476,8 @@
 				33E222ED1FA8C5280013CCC3 /* Validation.swift */,
 				33E223021FA9F4EA0013CCC3 /* IPAddress.swift */,
 				33E2230A1FA9F5010013CCC3 /* Continent.swift */,
+				42A461D8207FABD3007FFD68 /* JSONType.swift */,
+				42B6A1282080BF05006F1317 /* Encodable+Dictionary.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -971,12 +983,14 @@
 				01A334891E4F1B47003CE9BA /* ConnectionManager.swift in Sources */,
 				01A3348A1E4F1B4B003CE9BA /* NStack.swift in Sources */,
 				01A334881E4F1B47003CE9BA /* Repository.swift in Sources */,
+				42B6A12F2080BF0D006F1317 /* JSONType.swift in Sources */,
 				01A334921E4F1B59003CE9BA /* Logger.swift in Sources */,
 				01A3348D1E4F1B50003CE9BA /* AlertManager.swift in Sources */,
 				42CA6D172064F500002FC169 /* URLSession+Codable.swift in Sources */,
 				01A334841E4F1B43003CE9BA /* Timezone.swift in Sources */,
 				01A3347F1E4F1B43003CE9BA /* Message.swift in Sources */,
 				01A334821E4F1B43003CE9BA /* Language.swift in Sources */,
+				42B6A12C2080BF0A006F1317 /* Encodable+Dictionary.swift in Sources */,
 				01A334901E4F1B55003CE9BA /* TranslationManager.swift in Sources */,
 				01A334831E4F1B43003CE9BA /* Country.swift in Sources */,
 				01A334871E4F1B47003CE9BA /* APIConfiguration.swift in Sources */,
@@ -1009,6 +1023,7 @@
 				01503A2E1DF1DD2500B521CF /* Repository.swift in Sources */,
 				33E223031FA9F4EA0013CCC3 /* IPAddress.swift in Sources */,
 				01D4EDE91D5DF17800E7E94C /* Configuration.swift in Sources */,
+				42A461D9207FABD3007FFD68 /* JSONType.swift in Sources */,
 				01F4C6681DFF14690050D0F1 /* Logger.swift in Sources */,
 				305112721BD676DF005578DE /* VersionUtilities.swift in Sources */,
 				30D7070B1BDD80CE00FC5A01 /* ApplicationObserver.swift in Sources */,
@@ -1024,6 +1039,7 @@
 				01503A2C1DF1DD1500B521CF /* APIConfiguration.swift in Sources */,
 				2729E8491B9ED06600286B12 /* TranslationManager.swift in Sources */,
 				3027B2C11BBAE34D00C2F4FB /* ConnectionManager.swift in Sources */,
+				42B6A1292080BF05006F1317 /* Encodable+Dictionary.swift in Sources */,
 				82CB554C1C8DEAC200389D2B /* LanguageData.swift in Sources */,
 				01A3344A1E4E825E003CE9BA /* Constants.swift in Sources */,
 				01A3344D1E4E825E003CE9BA /* Extensions.swift in Sources */,
@@ -1066,12 +1082,14 @@
 				E3689C041D9EBA54004620D6 /* RateReminder.swift in Sources */,
 				01F4C6C61DFF72D70050D0F1 /* Repository.swift in Sources */,
 				01BBEFAE1DE0FC66003AC718 /* Country.swift in Sources */,
+				42B6A12D2080BF0C006F1317 /* JSONType.swift in Sources */,
 				E3689C051D9EBA54004620D6 /* Language.swift in Sources */,
 				E3689C061D9EBA54004620D6 /* Configuration.swift in Sources */,
 				42CA6D152064F4FE002FC169 /* URLSession+Codable.swift in Sources */,
 				01BBEFAF1DE0FC66003AC718 /* Timezone.swift in Sources */,
 				E3689C071D9EBA54004620D6 /* TranslationsResponse.swift in Sources */,
 				E3689C081D9EBA54004620D6 /* NStack.swift in Sources */,
+				42B6A12A2080BF09006F1317 /* Encodable+Dictionary.swift in Sources */,
 				E3689C091D9EBA54004620D6 /* ApplicationObserver.swift in Sources */,
 				01F4C6C81DFF72F00050D0F1 /* LogLevel.swift in Sources */,
 				E3689C0A1D9EBA54004620D6 /* ConnectionManager.swift in Sources */,
@@ -1114,6 +1132,7 @@
 				E3B654A31E0056F300FC9380 /* AppOpenData.swift in Sources */,
 				E3B654A41E0056F300FC9380 /* Message.swift in Sources */,
 				33E222F21FA8C5280013CCC3 /* Validation.swift in Sources */,
+				42B6A12E2080BF0D006F1317 /* JSONType.swift in Sources */,
 				33E223071FA9F4EA0013CCC3 /* IPAddress.swift in Sources */,
 				E3B654A51E0056F300FC9380 /* Update.swift in Sources */,
 				E3B654A61E0056F300FC9380 /* RateReminder.swift in Sources */,
@@ -1133,6 +1152,7 @@
 				E3B654B11E0056F300FC9380 /* NStackError.swift in Sources */,
 				E3B654B21E0056F300FC9380 /* AlertManager.swift in Sources */,
 				E3B654B31E0056F300FC9380 /* VersionUtilities.swift in Sources */,
+				42B6A12B2080BF09006F1317 /* Encodable+Dictionary.swift in Sources */,
 				E3B654B41E0056F300FC9380 /* Translatable.swift in Sources */,
 				E3B654B51E0056F300FC9380 /* TranslationManager.swift in Sources */,
 				E3B654B71E0056F300FC9380 /* Logger.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 
 // TODO: Fix update struct in app open and adjust fetchUpdates response model
 
-struct AppOpenResponse: Codable {
+struct AppOpenResponse: Decodable {
     var data: AppOpenData?
     var languageData: LanguageData? // <-meta
     
@@ -24,6 +24,12 @@ struct AppOpenResponse: Codable {
         self.data = try? map.decode(AppOpenData.self, forKey: .data)
         self.languageData = try? map.decode(LanguageData.self, forKey: .languageData)
     }
+    
+//    func encode(to encoder: Encoder) throws {
+//        var map = try encoder.container(keyedBy: CodingKeys.self)
+//        try? map.encode(data, forKey: .data)
+//        try? map.encode(languageData, forKey: .languageData)
+//    }
     
     private enum CodingKeys: String, CodingKey {
         case data

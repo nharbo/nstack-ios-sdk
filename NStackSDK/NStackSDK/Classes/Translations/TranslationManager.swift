@@ -264,10 +264,10 @@ public class TranslationManager {
         let dictionary = translationsDictionary
 
         // Set our language
-        currentLanguage = languageOverride ?? processLanguage(dictionary)
+        currentLanguage = languageOverride ?? dictionary.languageData?.language
 
         // Figure out and set translations
-        let parsed = processAllTranslations(dictionary)
+        let parsed = extractLanguageDictionary(fromDictionary: dictionary.translations ?? [:])
         guard let data = try? JSONEncoder().encode(parsed) else {
             print("failed to get data in loadTranslations")
             return
@@ -283,32 +283,36 @@ public class TranslationManager {
     ///
     /// - Parameter translations: The new translations.
     func set(response: TranslationsResponse?) {
-        guard let data = try? JSONEncoder().encode(response), let dictionary = try? JSONDecoder().decode([String: Any].self, from: data) else {
-            logger.logError("Failed to create dicitonary from translations API response.")
-            return
-        }
-        
         // Persist the object
-        persistedTranslations = dictionary
+        persistedTranslations = response
         
         // Reload the translations
         _ = loadTranslations()
     }
     
     /// Returns the saved dictionary representation of the translations.
-    var translationsDictionary: [String: Any] {
+    var translationsDictionary: TranslationsResponse {
         return persistedTranslations ?? fallbackTranslations
     }
     
     /// Translations that were downloaded and persisted on disk.
-    var persistedTranslations: [String: Any]? {
+    var persistedTranslations: TranslationsResponse? {
         get {
             logger.logVerbose("Getting persisted traslations.")
             guard let url = translationsFileUrl else {
                 logger.logWarning("No persisted translations available, returing nil.")
                 return nil
             }
-            return NSDictionary(contentsOf: url) as? [String: Any]
+            
+            guard
+                let retrivedData = try? Data(contentsOf: url)
+                else
+            {
+                logger.logWarning("Failed to get persisted tranlations")
+                
+            }
+            
+            return try? JSONDecoder().decode(TranslationsResponse.self, from: retrivedData)
         }
         set {
             guard let translationsFileUrl = translationsFileUrl else {
@@ -334,8 +338,23 @@ public class TranslationManager {
             
             // Save to disk
             var url = translationsFileUrl
-            guard (newValue as NSDictionary).write(to: url, atomically: true) else {
-                logger.logError("Failed to persist translations to disk.")
+            
+            let dictionary = try? newValue.asDictionary()
+            
+            guard
+                let safeDictionary = dictionary
+                else
+            {
+                logger.logError("Failed to convert translations to dictionary. with translations \(newValue)")
+                return
+            }
+            
+            let nsDictionary = NSDictionary(dictionary: safeDictionary)
+            
+            guard nsDictionary.write(to: url, atomically: true)
+                else
+            {
+                logger.logError("Failed to persist translations to disk. with dictionary to save \(dictionary ?? [:])")
                 return
             }
             logger.logVerbose("Translations persisted to disk.")
@@ -358,7 +377,7 @@ public class TranslationManager {
     /// and the right one is chosen based on the current locale.
     ///
     /// - Returns: A dictionary representation of the selected local translations set.
-    var fallbackTranslations: [String: Any] {
+    var fallbackTranslations: TranslationsResponse {
         for bundle in repository.fetchBundles() {
             guard let filePath = bundle.path(forResource: "Translations", ofType: "json") else {
                 logger.logWarning("Bundle did not contain Translations.json file: " +
@@ -379,14 +398,10 @@ public class TranslationManager {
             }
             
             do {
-                logger.logVerbose("Converting loaded file to JSON object.")
-                let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])
-                guard let dictionary = json as? [String: Any] else {
-                    logger.logError("Failed to get [String: Any] from fallback JSON file.")
-                    continue
-                }
+                logger.logVerbose("Converting loaded file to TranslationsResponse object.")
+                let decodedResponse = try JSONDecoder().decode(TranslationsResponse.self, from: data)
                 
-                return dictionary
+                return decodedResponse
             } catch {
                 logger.logError("Error loading translations JSON file: " +
                     error.localizedDescription)
@@ -394,7 +409,7 @@ public class TranslationManager {
         }
         
         logger.logError("Failed to load fallback translations, file non-existent.")
-        return [:]
+        return TranslationsResponse()
     }
     
     // MARK: - Parsing -
