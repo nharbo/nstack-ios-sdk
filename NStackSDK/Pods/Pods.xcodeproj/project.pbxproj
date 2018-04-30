@@ -1,0 +1,2901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03FE406B66F27D5CC9B94D7939C1E156 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */; };
+		06DF3FC4D3B067B9449DC4B91DB484DD /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */; };
+		070EE4E0B5552D6BDF02BAE35F40ED1F /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		078490D1656D3BEF04C6E5748DD86267 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */; };
+		07890E65403D9C0A6707E332E82B412A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */; };
+		08FA6C843CA2BC2C90DDAABE3C3D9C82 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		08FC62E8037D04905D3493FBC3B52271 /* Alamofire-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A8A742D06226FD40346AAF6B5B2439 /* Alamofire-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		095996B7BCE8E4A98DAE0A4719A364DC /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */; };
+		09B86C95A8C431D77F0ED7BBD10D4B74 /* Alamofire-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9D1E842F1C6CFA4BD1C86F63D73F2A /* Alamofire-macOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A5A654E203F0F782499DB29E69316F2 /* Serpent-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AA7D8975B35583A104025ADA0A11C /* Serpent-iOS-dummy.m */; };
+		0AA846DE272A1AED7E2508C9F29AC60D /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */; };
+		0D4F8960B64B64636CDB9D0BAE4C010A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */; };
+		0F01C316721C2FAB23E02F0F692FB04D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */; };
+		0FB1B2A3BE57C778AA666027B0F557A1 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1053F2F45C216760B28B1F79AA1B0B3E /* Alamofire-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E30EC92353B1C9BDB03FA3FEEE24D1 /* Alamofire-watchOS-dummy.m */; };
+		1151052A6FB8E11169A8414FE247CB65 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB713E5CFD119267AFC40974739F5458 /* Result.swift */; };
+		140BD26892A4D680DAFDD395F446E18A /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */; };
+		14F1E7052B1D96C735DBAD038A031D5F /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */; };
+		18EE9D47994D5985319994989E5D167A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */; };
+		1C904A2DEFE3EF6EC305F0D6029E49AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63590540023031832A649E7062F17 /* Foundation.framework */; };
+		1D19DDFFD63468C6EF61A477C7536E8A /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */; };
+		1E9300A2783A11792236D246B8ECF7D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63590540023031832A649E7062F17 /* Foundation.framework */; };
+		1EFC80BC9B893EF8E0592D786AAC9516 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */; };
+		1FF187BA6507B0D91C37D7B54735C659 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */; };
+		252B32A457FCA6CE3E599EC896C0228D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */; };
+		25C96AE98F1BD32F264BA15EF820799F /* Cashier-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85BDA4EBBEC93B9D5BC4800F5AEE3799 /* Cashier-iOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2828B98896711CD4C45A4DF9EEB45334 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */; };
+		2A5EDC73FAB437139CB0610AEBDCC424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */; };
+		2A6643E958EF3E4562B32633552C572C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */; };
+		2AF0BB8B9087FB5E33B919B281AD9D58 /* Pods-NStackSDK-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F77D52635F9C44F9597EBF6E51994160 /* Pods-NStackSDK-watchOS-dummy.m */; };
+		2B2B038B35B511E1C43206766F88F01D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */; };
+		32577BE28D0ED3C02D47ED4925D4256C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */; };
+		3561097155E2B8150382127C9CEA32EF /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */; };
+		35762A4C5FB17739704EA297BFAB8D51 /* Serpent-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F87546B20DB0E3DC3348C6574DE81EE /* Serpent-macOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37AA8CB096C9149F9C284E46104D483B /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */; };
+		3A20FADC61913189983C7D59B2F20B23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */; };
+		3A5257F03691478DFE1462DDF4EB2E71 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3ACAFD445D2720C779B69AB2EA3AD712 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */; };
+		3BE5A99FEED5CC07EB63F3F1B578D419 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */; };
+		43A6D18D4E706CDB9B547F48D431F99D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */; };
+		45D5ACC0B7871A9F25689234BD8C1247 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */; };
+		4621791D9C7A6A7DD6A95E8FB46AF90E /* Cashier-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C7B7C79B25AD40B92324B8483567D5 /* Cashier-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		474E8AEB6B87731CE87BBB45C569D71B /* Serpent-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3634A9F3F1B3B04F444E43035F33CF7E /* Serpent-tvOS-dummy.m */; };
+		491B212F1632D81AB0ED5FBD31D2ED62 /* Serpent-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09287B0565854154C49ACEC2EA51C041 /* Serpent-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A822D6A89F6E155609ACFA4A4C0958F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */; };
+		4C3F1AD8D2AA9FBEECAF64C794F10CC5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */; };
+		4DD8B0DE73E6A9A194AE3055561F361E /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */; };
+		5087B1D56DBF42A721A31D2B2B1A72B3 /* Pods-NStackSDK-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB3E6A2C55A1601C2F4E0F7627EC1DF /* Pods-NStackSDK-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52DF67BB4A5737BC02AA046B66FA430D /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */; };
+		53809D264B67A08B9B78C308ED240D2A /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */; };
+		5440F6F8FD517B6E256F44066CCB78B8 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */; };
+		548FA2B3C99C9A693674654C5D3332B7 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */; };
+		5533E2CAC7021C5490044ADA72C6D399 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */; };
+		56F1C3A45041CB0784703B51C229CF78 /* Cashier-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B43BDD64B9ED21FF7F38B30E17D0FC /* Cashier-iOS-dummy.m */; };
+		576100DEB0B7EFF08F674D9270773FE7 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57C7CBF15BC38C3F1300305345A15FCE /* Pods-NStackSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0004D2C2E0FF8A08BC70F792BB18BAF /* Pods-NStackSDK-dummy.m */; };
+		5ACB435BD68CF4EF92E81CAB1554CEA7 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */; };
+		5B70A53A6739C9C8227E55DDF3CBA209 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */; };
+		5BB6087B378A2CEBC18FEA8982A298A6 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */; };
+		5BDFA2A77F53E8F4138AF627C45899FF /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */; };
+		5E24683B79F3E7616CE8F09C77638FC9 /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */; };
+		5E29D884FC15F3CEE6760C4F46DDAC4F /* Pods-NStackSDK-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A06EEF0CF3FC721B6C34DD0302C29AA4 /* Pods-NStackSDK-tvOS-dummy.m */; };
+		5EF772E647C60ECD9E79A2297BFA93E6 /* Pods-NStackSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D161269747102EC163776A1F1BED2BBA /* Pods-NStackSDK-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5F6CDA492B074416F5BCA27B63F8BE54 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */; };
+		60EB2C7FD49531945B864B79D526AD37 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */; };
+		654C40954DADF5D7D132EA33D13B289B /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68101B61DD31C1024F6B133AC61E9F88 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */; };
+		6811462E7984187DCEE49B23EC3EECC1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D99F0626A160113D376F84793FDDE /* Operator.swift */; };
+		69BD04FEB76A7730301F77D72C0632CE /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */; };
+		710595D97D8E6E7D4952D05E2E933065 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */; };
+		71EAC22B05F67AE3CEEF07AB8E69628C /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */; };
+		7379616A72787EDC6EF22D1F4CFA465A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */; };
+		76CD1906D7FB60A3369D420BE5D8770B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */; };
+		771475E9EE3330A05CF7D36BCEF29480 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */; };
+		784DBCD20BFEBCEECC0EFCF515A5F1B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD84615897065544A100910FCBD3738 /* Extensions.swift */; };
+		785C8A3C8DF8C7B39E6D646AB4908E98 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */; };
+		79E81C59475532D7F2DC13EE19BF4771 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD84615897065544A100910FCBD3738 /* Extensions.swift */; };
+		7BDBC772827185D385CB90A054C98737 /* Pods-NStackSDK-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D99EC05E43A38E633C0A14972AF34B34 /* Pods-NStackSDK-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D74DE214C9CE199904B8D111D265827 /* Cashier-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D808B183246EF9C9B082F1BC89FF935 /* Cashier-macOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DBD11F0CAB869B4FFF96EC55486FFD0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */; };
+		83DC33CCACF286AF26D659050DCBC2A1 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */; };
+		854CD0BBBA97B6A40B6EA6DC54A47D3F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB713E5CFD119267AFC40974739F5458 /* Result.swift */; };
+		86E8AFF9949EC95C83C0794E85697DB8 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		874A6964983EFFF7B82AE7B36A363AB3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */; };
+		8914DE73DF10EB70368A74FC6E17510C /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */; };
+		8BC723FEAABD5B2314FE26F9F3E7B878 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */; };
+		8D5A498DB91F973EB187773085F42E06 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */; };
+		8E8E3CF9AAF3AC39EF70B7326E8A59DF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */; };
+		909E2F6D81F17C1624CB1D2A5CBAFE43 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */; };
+		90E0C98FF720973E6E0270C455354D7E /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */; };
+		90FD2C460C1F88BD22C714CE1597726D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */; };
+		934ECB9FB04DAC0901A529D8F1D5A325 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */; };
+		93A9F0B6A5C754604E079DDFBF4D1AEB /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */; };
+		9401888389B980E7CA4265E038A7D15B /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */; };
+		949BED195CA78DFC6C1B58C895BB9B68 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */; };
+		96111B4FB7B2D9202837EF0DB139230C /* Alamofire-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4BF081FBC88F2A5BE017554575443B /* Alamofire-iOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		994F79A4FB5E31BF33CE42F7B9DA3130 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */; };
+		9A1078C715430DFE970A68799D5B0C1D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */; };
+		9A56F5EB12EEDD881F90CCBBDE4D0E3B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */; };
+		9AA0629F5D8A82280AA32D6F3A89790F /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */; };
+		9B3B1402B6164FF5C79E5354CD0AAD7D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */; };
+		9F5C1DC63CF427815A604B16F9F4B416 /* Cashier-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751C789E9E179618F0A3DE6E2828E1C /* Cashier-tvOS-dummy.m */; };
+		9FC7550B3E01AB535B7325A65BEB75E1 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */; };
+		9FE90989C9A7C46D839D589F75780ADD /* Serpent-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE210B760D3855336A503BEFB260939F /* Serpent-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5776E1EF9BD79DB26D2353478F94137 /* Alamofire-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 644633937217D754398ABCBF9915BD45 /* Alamofire-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A77DAF43058E4FA62BC6C13ACFEDB475 /* Alamofire-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7614AB0765A3B8337B6B2625DA366AF7 /* Alamofire-iOS-dummy.m */; };
+		ABD9DED95BDBB6D33DF8596F008A95D1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */; };
+		AC6F6C1BDE4526BBF6FDD38DF733920E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */; };
+		AD0116FBB77C82D8F1EB228E4DEE1802 /* Serpent-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92AC75E9A3AAC64C6025E536C7231842 /* Serpent-iOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AEBE93E042F04BC528E9087F1E941AD4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */; };
+		B1B97176DD990A61BD7FC6418F89D376 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */; };
+		B29DCB0FDA522318423C8803263A2343 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */; };
+		B4F671F2F4691C396F132D6D7EB71B66 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */; };
+		B7C484D6AC33AFC896EEE6D5E218020C /* Serpent-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C71BAE3941F81879B3F5E84BA1633361 /* Serpent-watchOS-dummy.m */; };
+		B82457D1EF7E0B3351F6E05F6490ABF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */; };
+		BAC3B4E7BAC601CB623C162341453E53 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */; };
+		BBAFDC3C3F8209F6EE6FA5E1696619B0 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD6FFA280278DC2148738697AB37497B /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D99F0626A160113D376F84793FDDE /* Operator.swift */; };
+		BDBFD1E099B0F81F853ED4E566895137 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */; };
+		BF550C82C5DC31CBE3632B0B7AD82DB4 /* Cashier-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F17848A4CECA2BA7BBDD928C00620E04 /* Cashier-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF55DACB78CAEA1D7F2A5C244AA1E5D7 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C1995CCB17804FB8A4C9BE09A110697B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */; };
+		C90F899EEB4EBC5537621F391ADFAA27 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */; };
+		CA90A0B29794185886E2FA7A9FF0DA79 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB8D8B65CBB4EAFB905C110B040734B5 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */; };
+		CB8DC89DF42E2417917176A7D6E186DE /* Serpent-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 854E0B14FC2F5ADC796324E2FCBE119B /* Serpent-macOS-dummy.m */; };
+		CEA3BD6EEC11BDA218B6CCCEE5BBB657 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */; };
+		CF9ED2E8D9CDB9B82ECC55F587EB7031 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB713E5CFD119267AFC40974739F5458 /* Result.swift */; };
+		D189FC7E00B189683770634879EBA758 /* Cashier-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5603B7F98FB33093D43CFCECCA312 /* Cashier-watchOS-dummy.m */; };
+		D206E31A54EEA58F2009D60E5EB84115 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */; };
+		D50385E97CBAFFF2BE8F41B541688547 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB713E5CFD119267AFC40974739F5458 /* Result.swift */; };
+		D621FE2B69211534F32D7A0CA7541ECB /* Pods-NStackSDK-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D696916274CCB3E57D3AE023A5A11A9A /* Pods-NStackSDK-macOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D708B84864841BA9A4CEEAEDF34C5113 /* Pods-NStackSDK-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7DDCE930DE6EF0D5085DF7698B893D /* Pods-NStackSDK-macOS-dummy.m */; };
+		D77B2E835559797D5BE7D5DEC4B7F451 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */; };
+		D84DA155E20507E6FE9F0C3EE024D8EB /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */; };
+		D8BD0E0BC90CD76F845CA366F6BB08E2 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D99F0626A160113D376F84793FDDE /* Operator.swift */; };
+		D8D9451B798D73D6643FF334C3E10C6F /* Cashier-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC46325D10DB91FB955BCB35A9E13BA4 /* Cashier-macOS-dummy.m */; };
+		DA86CC2F130188C90E1D5B34C8C077B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD84615897065544A100910FCBD3738 /* Extensions.swift */; };
+		DCF2A8AFABA6C4C5F036D7275E79A572 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */; };
+		DD7ED1E44A026BBE64EAFF5854D9DA52 /* Alamofire-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8A4C6DCDEEB45B5CF2E7DF0272DA1 /* Alamofire-macOS-dummy.m */; };
+		DDB08FD808601E4B63A9B3794B57653F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */; };
+		DEB5EA17AFDF97E9FB10079F788B1719 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF8BCDBCB98EE807ECDB481CE7B1A7B7 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */; };
+		E110AF94E109F2F5D93EE6A92DBD9794 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */; };
+		E45A88FC3BC83CC01645D17BF113A41C /* Serpent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */; };
+		E4D330BB5B9F8B60F175283019D4CDBC /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */; };
+		E5E1918F2C50AA77DFA6EDBCA1529811 /* Alamofire-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F8D72EE4327A3A806680BD865F0E5 /* Alamofire-tvOS-dummy.m */; };
+		E7F5FCAA3F589176DE94DAEA2A0275A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD84615897065544A100910FCBD3738 /* Extensions.swift */; };
+		EA50E35E1AECBE38AA160298D60C572B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63590540023031832A649E7062F17 /* Foundation.framework */; };
+		EACC1E0556C849C08597C45CB5C141D0 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */; };
+		EFD0A2753F4D1C467CBD3C7E045636B5 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */; };
+		F1F8CD0ED5A4C4337FD39071A33DFFD6 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F28C5C37FD67682B909DAD1566C42FB5 /* BridgingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */; };
+		F85438E3FB8748478F627C54729F0B05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC63590540023031832A649E7062F17 /* Foundation.framework */; };
+		FB34F34AA313AA5358AB76711F74A0E9 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */; };
+		FDD026087657B3EDB5A75F5CDE7FFF86 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D99F0626A160113D376F84793FDDE /* Operator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08C83D1A65EEB8760762F3C2EA4B42C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7CFB5C17CE6241E57E9F2991789781C;
+			remoteInfo = "Alamofire-tvOS";
+		};
+		2885DECB7CB4D85C4E0C8698DCE68682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFA5E719EB6E47F15B984253254F9ED;
+			remoteInfo = "Serpent-tvOS";
+		};
+		42FC584743A94E60C0554ECD41A8EC82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B82B4982BA0C670E44FEB045B30F1DC7;
+			remoteInfo = "Serpent-macOS";
+		};
+		550E8BD6EF760551C2D347022D98ED7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35C820AA92C882165013161167587413;
+			remoteInfo = "Cashier-iOS";
+		};
+		56E77288DF6943DA5A3A5EC508D79456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F85F5669828DF2F30FAD1141CE6D12D4;
+			remoteInfo = "Serpent-watchOS";
+		};
+		69AD43CB59ED87E7C962DD32805E1098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89112AD98E63E0FFBD24E00EE56BB52E;
+			remoteInfo = "Alamofire-watchOS";
+		};
+		880F5CBF1AC7103C3554D7BE6ECC1671 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1243EBA6C6938ABEBCAD8B7ACD7CD62D;
+			remoteInfo = "Serpent-iOS";
+		};
+		D3B4E691F80E527AA1C5A04FA0B39C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1798402F7232BB55F19A0E5A0EADD36;
+			remoteInfo = "Alamofire-iOS";
+		};
+		E541BCA1AE78826669E4ABBF268FD7F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01B5BAD4E0EBBF38EDD47834D94A904B;
+			remoteInfo = "Alamofire-macOS";
+		};
+		E62ACBD78C8E1B2FF9D5CBEA057A434D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5FD0FD1017A04FA74AA22B6A1A5C9E2;
+			remoteInfo = "Cashier-watchOS";
+		};
+		EDB2445B5909D5581D74C18C8CBF5198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06EFF7AB21A2F20ADD557AD4AD954AA6;
+			remoteInfo = "Cashier-tvOS";
+		};
+		F9D0CBD797E05282D56B5AC2430D0C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE964E6FE1CF202D2B2CEF3CB86320BF;
+			remoteInfo = "Cashier-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06C5F234B52F186EE6ACCD107A1F9F4F /* libCashier-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCashier-iOS.a"; path = "libCashier-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		09287B0565854154C49ACEC2EA51C041 /* Serpent-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-tvOS-umbrella.h"; path = "../../Headers/Public/Serpent/Serpent-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		098AC83AB1AF7CF50B352801FF403FE7 /* Pods-NStackSDK-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NStackSDK-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0B9D1E842F1C6CFA4BD1C86F63D73F2A /* Alamofire-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-macOS-umbrella.h"; path = "../../Headers/Public/Alamofire/Alamofire-macOS-umbrella.h"; sourceTree = "<group>"; };
+		0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		0DB5603B7F98FB33093D43CFCECCA312 /* Cashier-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Cashier-watchOS-dummy.m"; path = "../Cashier-watchOS/Cashier-watchOS-dummy.m"; sourceTree = "<group>"; };
+		0E418CA5878ABA4CDCC80B7A0A0F4EF0 /* Cashier-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-watchOS-prefix.pch"; path = "../Cashier-watchOS/Cashier-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		0FAAC22A9F8ACB631A69B7A2D7C2918E /* Pods-NStackSDK-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NStackSDK-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1037C6ECED6E28DBDB2D961D571A65CB /* libSerpent-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSerpent-macOS.a"; path = "libSerpent-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		103DA7BF7B304384715BCDC25525519C /* Pods-NStackSDK-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		1B42D029804A9B72003F94890C16DDC0 /* Cashier-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Cashier-iOS.modulemap"; path = "../../Headers/Public/Cashier/Cashier-iOS.modulemap"; sourceTree = "<group>"; };
+		1D808B183246EF9C9B082F1BC89FF935 /* Cashier-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-macOS-umbrella.h"; path = "../../Headers/Public/Cashier/Cashier-macOS-umbrella.h"; sourceTree = "<group>"; };
+		1FA2B994B48881C315CBFA544B5F2D59 /* libSerpent-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSerpent-iOS.a"; path = "libSerpent-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		25B01D0EEAD74E5684EF5B09DF762855 /* libCashier-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCashier-macOS.a"; path = "libCashier-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26DFDD5E116AB44CD16FF3CEEAEDB0AD /* libPods-NStackSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NStackSDK.a"; path = "libPods-NStackSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		278EE81BA5B0A2045E1E324ED19E0489 /* Cashier-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Cashier-macOS.modulemap"; path = "../../Headers/Public/Cashier/Cashier-macOS.modulemap"; sourceTree = "<group>"; };
+		2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		2C4B1769CC56C5D6948D3B2F9D109FC3 /* Pods-NStackSDK-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NStackSDK-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D3F8D72EE4327A3A806680BD865F0E5 /* Alamofire-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-tvOS-dummy.m"; path = "../Alamofire-tvOS/Alamofire-tvOS-dummy.m"; sourceTree = "<group>"; };
+		2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		2F7DDCE930DE6EF0D5085DF7698B893D /* Pods-NStackSDK-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NStackSDK-macOS-dummy.m"; sourceTree = "<group>"; };
+		314A66C8D0F348801CCE6ACB4D622837 /* libPods-NStackSDK-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NStackSDK-tvOS.a"; path = "libPods-NStackSDK-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B43BDD64B9ED21FF7F38B30E17D0FC /* Cashier-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cashier-iOS-dummy.m"; sourceTree = "<group>"; };
+		32E5ED9D05392DDC92B862F44C7AB1F9 /* Cashier-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-tvOS-prefix.pch"; path = "../Cashier-tvOS/Cashier-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		3634A9F3F1B3B04F444E43035F33CF7E /* Serpent-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Serpent-tvOS-dummy.m"; path = "../Serpent-tvOS/Serpent-tvOS-dummy.m"; sourceTree = "<group>"; };
+		37EAFBE1C493F652DFBB4CE4B59EDA4F /* Serpent-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Serpent-iOS-prefix.pch"; sourceTree = "<group>"; };
+		38FE2EF875AC830157919BC6A1C514CC /* Pods-NStackSDK-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3A6E5D32DBF7F90D175B5ADDD61B2ACC /* libCashier-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCashier-tvOS.a"; path = "libCashier-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CEF06D2CBE642CE1FF115B263CEA28F /* Cashier-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Cashier-tvOS.xcconfig"; path = "../Cashier-tvOS/Cashier-tvOS.xcconfig"; sourceTree = "<group>"; };
+		3F87546B20DB0E3DC3348C6574DE81EE /* Serpent-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-macOS-umbrella.h"; path = "../../Headers/Public/Serpent/Serpent-macOS-umbrella.h"; sourceTree = "<group>"; };
+		405DB9EE63CEAF00BB836BD11389F04D /* Pods-NStackSDK-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NStackSDK-macOS.modulemap"; sourceTree = "<group>"; };
+		40B8A4C6DCDEEB45B5CF2E7DF0272DA1 /* Alamofire-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-macOS-dummy.m"; path = "../Alamofire-macOS/Alamofire-macOS-dummy.m"; sourceTree = "<group>"; };
+		41DF26D2E887BF6A1052478E12731724 /* Alamofire-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-macOS.xcconfig"; path = "../Alamofire-macOS/Alamofire-macOS.xcconfig"; sourceTree = "<group>"; };
+		43AC20747BF5BCCD6D563A922A2A9B9C /* Pods-NStackSDK-macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NStackSDK-macOS-resources.sh"; sourceTree = "<group>"; };
+		4427EBEB75A8561AB65A01A4E306A1E9 /* Pods-NStackSDK-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		459EB0EF3F016F549D6F57E01701F087 /* Alamofire-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-prefix.pch"; sourceTree = "<group>"; };
+		49CD6E8D5485FDF4CD9866D3E3831906 /* Cashier-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Cashier-macOS.xcconfig"; path = "../Cashier-macOS/Cashier-macOS.xcconfig"; sourceTree = "<group>"; };
+		4C243B6FC8092219CF68BD0B925D2AFF /* Alamofire-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-tvOS.xcconfig"; path = "../Alamofire-tvOS/Alamofire-tvOS.xcconfig"; sourceTree = "<group>"; };
+		4C3BA136C34AB3E6AF2D3A650222F107 /* Pods-NStackSDK-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4C5AA7D8975B35583A104025ADA0A11C /* Serpent-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Serpent-iOS-dummy.m"; sourceTree = "<group>"; };
+		4CA9B35C33FB8EA2A4AF2D8A4870879C /* libAlamofire-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAlamofire-watchOS.a"; path = "libAlamofire-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF5290D0908CA5D62C3F8EDC8119C5 /* Pods-NStackSDK-watchOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NStackSDK-watchOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		51A8A742D06226FD40346AAF6B5B2439 /* Alamofire-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-watchOS-umbrella.h"; path = "../../Headers/Public/Alamofire/Alamofire-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		53297B99DA86EAF206594DDE0EB3A60E /* Serpent-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Serpent-macOS.modulemap"; path = "../../Headers/Public/Serpent/Serpent-macOS.modulemap"; sourceTree = "<group>"; };
+		56D29F970AF4035ADB33EB0A60BC5C74 /* Pods-NStackSDK-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NStackSDK-tvOS-resources.sh"; sourceTree = "<group>"; };
+		5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		57F199913251ADF2A08A543C15E0F8E7 /* Pods-NStackSDK-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		57F7418DD2DE1E1E4F9F4C26BA613154 /* Serpent-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Serpent-iOS.modulemap"; path = "../../Headers/Public/Serpent/Serpent-iOS.modulemap"; sourceTree = "<group>"; };
+		5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BridgingBox.swift; path = Serpent/Serpent/Classes/Other/BridgingBox.swift; sourceTree = "<group>"; };
+		5C3ECA4FEB3CA4A8C5372FA7DA810D33 /* Cashier-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-macOS-prefix.pch"; path = "../Cashier-macOS/Cashier-macOS-prefix.pch"; sourceTree = "<group>"; };
+		61C7B7C79B25AD40B92324B8483567D5 /* Cashier-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-watchOS-umbrella.h"; path = "../../Headers/Public/Cashier/Cashier-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		644633937217D754398ABCBF9915BD45 /* Alamofire-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-umbrella.h"; path = "../../Headers/Public/Alamofire/Alamofire-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		6751C789E9E179618F0A3DE6E2828E1C /* Cashier-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Cashier-tvOS-dummy.m"; path = "../Cashier-tvOS/Cashier-tvOS-dummy.m"; sourceTree = "<group>"; };
+		67F3AB4D63530FD8C652C0D0A9E757A0 /* Cashier-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Cashier-watchOS.modulemap"; path = "../../Headers/Public/Cashier/Cashier-watchOS.modulemap"; sourceTree = "<group>"; };
+		68F83A2CC4E923483128977635706FA9 /* Serpent-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-watchOS-prefix.pch"; path = "../Serpent-watchOS/Serpent-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		7428045D914D8E85CDD9E09E0DC98431 /* Alamofire-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-watchOS.modulemap"; path = "../../Headers/Public/Alamofire/Alamofire-watchOS.modulemap"; sourceTree = "<group>"; };
+		7614AB0765A3B8337B6B2625DA366AF7 /* Alamofire-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-iOS-dummy.m"; sourceTree = "<group>"; };
+		7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		798CBE82862F5111825F9EE4460D5A05 /* Pods-NStackSDK-watchOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NStackSDK-watchOS-resources.sh"; sourceTree = "<group>"; };
+		79B46E7002850B7C61212AFCE12E7F28 /* libCashier-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCashier-watchOS.a"; path = "libCashier-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOPersistentStore.h; path = Cashier/Classes/NOPersistentStore.h; sourceTree = "<group>"; };
+		7E5202404E3A680C9555F0CEBF2544BF /* Alamofire-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-watchOS-prefix.pch"; path = "../Alamofire-watchOS/Alamofire-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		7F37BE93D4938E3076DC925A93A87AA7 /* Pods-NStackSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NStackSDK-acknowledgements.plist"; sourceTree = "<group>"; };
+		7FF181964AF43649121EBDE95EC38B98 /* Cashier-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cashier-iOS-prefix.pch"; sourceTree = "<group>"; };
+		8326D0F0B489BFA4D4D4F5B2AE6CB34D /* Cashier-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Cashier-watchOS.xcconfig"; path = "../Cashier-watchOS/Cashier-watchOS.xcconfig"; sourceTree = "<group>"; };
+		83B742CB19A6F33049DF53B16A65BEAA /* Pods-NStackSDK-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		854E0B14FC2F5ADC796324E2FCBE119B /* Serpent-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Serpent-macOS-dummy.m"; path = "../Serpent-macOS/Serpent-macOS-dummy.m"; sourceTree = "<group>"; };
+		85BDA4EBBEC93B9D5BC4800F5AEE3799 /* Cashier-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-iOS-umbrella.h"; path = "../../Headers/Public/Cashier/Cashier-iOS-umbrella.h"; sourceTree = "<group>"; };
+		8A4E6B9CC7BA88DCAE7C186CBD560A4B /* Pods-NStackSDK-watchOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NStackSDK-watchOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E4D99F0626A160113D376F84793FDDE /* Operator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = Serpent/Serpent/Classes/Operators/Operator.swift; sourceTree = "<group>"; };
+		8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		905BAA994003EAE48BDA46CA9FF29306 /* Cashier-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Cashier-iOS.xcconfig"; sourceTree = "<group>"; };
+		9155B4396D85221C000038745484AD2A /* Pods-NStackSDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NStackSDK-acknowledgements.markdown"; sourceTree = "<group>"; };
+		92AC75E9A3AAC64C6025E536C7231842 /* Serpent-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-iOS-umbrella.h"; path = "../../Headers/Public/Serpent/Serpent-iOS-umbrella.h"; sourceTree = "<group>"; };
+		9331355BC98B4A0021E6E8D5C2EEA12E /* Serpent-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Serpent-tvOS.xcconfig"; path = "../Serpent-tvOS/Serpent-tvOS.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		970B4C67A99EC04BA02B1F47DC78B71E /* libAlamofire-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAlamofire-macOS.a"; path = "libAlamofire-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A21371D524D0EFACF59765B789CB55 /* libSerpent-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSerpent-watchOS.a"; path = "libSerpent-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A06EEF0CF3FC721B6C34DD0302C29AA4 /* Pods-NStackSDK-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NStackSDK-tvOS-dummy.m"; sourceTree = "<group>"; };
+		A0AF5A32A9DEFCBC3F72EAD595391149 /* Pods-NStackSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK.release.xcconfig"; sourceTree = "<group>"; };
+		A1E30EC92353B1C9BDB03FA3FEEE24D1 /* Alamofire-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-watchOS-dummy.m"; path = "../Alamofire-watchOS/Alamofire-watchOS-dummy.m"; sourceTree = "<group>"; };
+		A296C7B4C2491F63C87135E968D016E5 /* Alamofire-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-tvOS.modulemap"; path = "../../Headers/Public/Alamofire/Alamofire-tvOS.modulemap"; sourceTree = "<group>"; };
+		A48C8E1B0BD936D0A0D0E403290E7CDC /* Serpent-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-macOS-prefix.pch"; path = "../Serpent-macOS/Serpent-macOS-prefix.pch"; sourceTree = "<group>"; };
+		A4B50446D3508E6912D9D40D691EFF40 /* Serpent-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Serpent-tvOS.modulemap"; path = "../../Headers/Public/Serpent/Serpent-tvOS.modulemap"; sourceTree = "<group>"; };
+		A54307494ADA16B8FB5E3A33323ECA0D /* Alamofire-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-iOS.xcconfig"; sourceTree = "<group>"; };
+		A5918BDB023F91FC636CCA3892E1E3A9 /* Pods-NStackSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NStackSDK-resources.sh"; sourceTree = "<group>"; };
+		A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5Addition.h"; path = "Cashier/Classes/NSString+MD5Addition.h"; sourceTree = "<group>"; };
+		ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cashier.h; path = Cashier/Classes/Cashier.h; sourceTree = "<group>"; };
+		B0004D2C2E0FF8A08BC70F792BB18BAF /* Pods-NStackSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NStackSDK-dummy.m"; sourceTree = "<group>"; };
+		B01EB4DAD3C18B5C4CBFB53F069AE435 /* Alamofire-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-macOS-prefix.pch"; path = "../Alamofire-macOS/Alamofire-macOS-prefix.pch"; sourceTree = "<group>"; };
+		B029CB99EC322E6451197B07493B489A /* Serpent-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Serpent-watchOS.xcconfig"; path = "../Serpent-watchOS/Serpent-watchOS.xcconfig"; sourceTree = "<group>"; };
+		B0AEF0940A5E707C04DFF0C8FE05A503 /* Serpent-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Serpent-iOS.xcconfig"; sourceTree = "<group>"; };
+		B14F03450055A46A061ADA9890609379 /* Pods-NStackSDK-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NStackSDK-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		B6CCED2DA47F6EA6C8DDAAEBE923F9FD /* Serpent-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Serpent-watchOS.modulemap"; path = "../../Headers/Public/Serpent/Serpent-watchOS.modulemap"; sourceTree = "<group>"; };
+		B76D2267B21B7CBF5CC6A6DF3533F280 /* libAlamofire-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAlamofire-iOS.a"; path = "libAlamofire-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA6ECD45A811A6561A0CA0D3FA55796 /* Cashier-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Cashier-tvOS.modulemap"; path = "../../Headers/Public/Cashier/Cashier-tvOS.modulemap"; sourceTree = "<group>"; };
+		BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		BB2C7C7968F4AC0C58EE549BF5ADB506 /* Pods-NStackSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NStackSDK.modulemap"; sourceTree = "<group>"; };
+		BBD84615897065544A100910FCBD3738 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Serpent/Serpent/Classes/Extensions/Extensions.swift; sourceTree = "<group>"; };
+		BC46325D10DB91FB955BCB35A9E13BA4 /* Cashier-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Cashier-macOS-dummy.m"; path = "../Cashier-macOS/Cashier-macOS-dummy.m"; sourceTree = "<group>"; };
+		C256ADE9DA730F6E37A7CF740D5F5C16 /* Alamofire-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-watchOS.xcconfig"; path = "../Alamofire-watchOS/Alamofire-watchOS.xcconfig"; sourceTree = "<group>"; };
+		C71BAE3941F81879B3F5E84BA1633361 /* Serpent-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Serpent-watchOS-dummy.m"; path = "../Serpent-watchOS/Serpent-watchOS-dummy.m"; sourceTree = "<group>"; };
+		CAC63590540023031832A649E7062F17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CB97BE28F4750C1CA2ACB2AB1A7A04B2 /* libAlamofire-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAlamofire-tvOS.a"; path = "libAlamofire-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Serpent.swift; path = Serpent/Serpent/Classes/Serpent.swift; sourceTree = "<group>"; };
+		CE4BF081FBC88F2A5BE017554575443B /* Alamofire-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-iOS-umbrella.h"; path = "../../Headers/Public/Alamofire/Alamofire-iOS-umbrella.h"; sourceTree = "<group>"; };
+		CEB3E6A2C55A1601C2F4E0F7627EC1DF /* Pods-NStackSDK-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NStackSDK-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		CF6F2A31DD23B4FC333123A68EE85800 /* libPods-NStackSDK-watchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NStackSDK-watchOS.a"; path = "libPods-NStackSDK-watchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D161269747102EC163776A1F1BED2BBA /* Pods-NStackSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NStackSDK-umbrella.h"; sourceTree = "<group>"; };
+		D172873723C261C334DD59552AC57CCE /* Pods-NStackSDK-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NStackSDK-watchOS.modulemap"; sourceTree = "<group>"; };
+		D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5Addition.m"; path = "Cashier/Classes/NSString+MD5Addition.m"; sourceTree = "<group>"; };
+		D696916274CCB3E57D3AE023A5A11A9A /* Pods-NStackSDK-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NStackSDK-macOS-umbrella.h"; sourceTree = "<group>"; };
+		D99EC05E43A38E633C0A14972AF34B34 /* Pods-NStackSDK-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NStackSDK-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Cashier.m; path = Cashier/Classes/Cashier.m; sourceTree = "<group>"; };
+		DB713E5CFD119267AFC40974739F5458 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		DE210B760D3855336A503BEFB260939F /* Serpent-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-watchOS-umbrella.h"; path = "../../Headers/Public/Serpent/Serpent-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		DE8D6827F0F63AB1D019A417A3C4C975 /* Alamofire-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-prefix.pch"; path = "../Alamofire-tvOS/Alamofire-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		E1DF81E58418927A4C5AB1848AFE7726 /* Serpent-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Serpent-macOS.xcconfig"; path = "../Serpent-macOS/Serpent-macOS.xcconfig"; sourceTree = "<group>"; };
+		E7203091A661452D1BC290504D516FF3 /* Pods-NStackSDK-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NStackSDK-tvOS.modulemap"; sourceTree = "<group>"; };
+		E79C5FA253D0081D20393D6AC0CC80B1 /* Pods-NStackSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NStackSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOPersistentStore.m; path = Cashier/Classes/NOPersistentStore.m; sourceTree = "<group>"; };
+		ED35F147EFDBC1DA52702B473B119FF0 /* libPods-NStackSDK-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NStackSDK-macOS.a"; path = "libPods-NStackSDK-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F17848A4CECA2BA7BBDD928C00620E04 /* Cashier-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Cashier-tvOS-umbrella.h"; path = "../../Headers/Public/Cashier/Cashier-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		F2BB29876BC67BE6B44D4E086873FE3D /* Serpent-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Serpent-tvOS-prefix.pch"; path = "../Serpent-tvOS/Serpent-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		F46FC6D99274D649E8900ACA801503C3 /* libSerpent-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libSerpent-tvOS.a"; path = "libSerpent-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D2A9D57C75D6D143419DFD1E9683F5 /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-iOS.modulemap"; path = "../../Headers/Public/Alamofire/Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
+		F77D52635F9C44F9597EBF6E51994160 /* Pods-NStackSDK-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NStackSDK-watchOS-dummy.m"; sourceTree = "<group>"; };
+		F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		FD307638773C9ADDE725D50159BD9170 /* Alamofire-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-macOS.modulemap"; path = "../../Headers/Public/Alamofire/Alamofire-macOS.modulemap"; sourceTree = "<group>"; };
+		FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		362787EECDBD275418B9E05463BAE65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5EDC73FAB437139CB0610AEBDCC424 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D8FC5225D23EF13D34D111632FB334E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9300A2783A11792236D246B8ECF7D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406BA51BA379033092385FF2A2683294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252B32A457FCA6CE3E599EC896C0228D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5627990322F168CB7EED6725949FF928 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB08FD808601E4B63A9B3794B57653F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74622B907F221F308A0FDAB6C4D1E9C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D4F8960B64B64636CDB9D0BAE4C010A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F99A4DA631C4608581949A5B43577E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA50E35E1AECBE38AA160298D60C572B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8848D63E81422E238AAE12CE3DC87547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85438E3FB8748478F627C54729F0B05 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B031ED540AA695C9586C246FAD76920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76CD1906D7FB60A3369D420BE5D8770B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE27487E38740C5AFFE1488B0FD07DC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078490D1656D3BEF04C6E5748DD86267 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B655CD1D3339456DB160BFF62CBB3527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C904A2DEFE3EF6EC305F0D6029E49AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0A650442541BA67D5F64468BE21FB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F1AD8D2AA9FBEECAF64C794F10CC5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8CEFE1ABA3B7AA1DB5BC884F6151244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EE9D47994D5985319994989E5D167A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC1574998B38FF0DC198A4250F34D52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBE93E042F04BC528E9087F1E941AD4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9FCFCA8197C48992A6789249B75EE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82457D1EF7E0B3351F6E05F6490ABF2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DD87276C56555EEF8DB09B686FCFA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A20FADC61913189983C7D59B2F20B23 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48BBA19DA313FB8D0B7AAE6EF91B8AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B2B038B35B511E1C43206766F88F01D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17B2D3DE5A5295CCCE29E68E7CA58BFB /* Serpent */ = {
+			isa = PBXGroup;
+			children = (
+				F75DAB1E624FDE0A711B3D90D552D2C0 /* Core */,
+				202ED3ED2EFFD5F2BA963A546ADEA173 /* Support Files */,
+			);
+			name = Serpent;
+			path = Serpent;
+			sourceTree = "<group>";
+		};
+		202ED3ED2EFFD5F2BA963A546ADEA173 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57F7418DD2DE1E1E4F9F4C26BA613154 /* Serpent-iOS.modulemap */,
+				B0AEF0940A5E707C04DFF0C8FE05A503 /* Serpent-iOS.xcconfig */,
+				4C5AA7D8975B35583A104025ADA0A11C /* Serpent-iOS-dummy.m */,
+				37EAFBE1C493F652DFBB4CE4B59EDA4F /* Serpent-iOS-prefix.pch */,
+				92AC75E9A3AAC64C6025E536C7231842 /* Serpent-iOS-umbrella.h */,
+				53297B99DA86EAF206594DDE0EB3A60E /* Serpent-macOS.modulemap */,
+				E1DF81E58418927A4C5AB1848AFE7726 /* Serpent-macOS.xcconfig */,
+				854E0B14FC2F5ADC796324E2FCBE119B /* Serpent-macOS-dummy.m */,
+				A48C8E1B0BD936D0A0D0E403290E7CDC /* Serpent-macOS-prefix.pch */,
+				3F87546B20DB0E3DC3348C6574DE81EE /* Serpent-macOS-umbrella.h */,
+				A4B50446D3508E6912D9D40D691EFF40 /* Serpent-tvOS.modulemap */,
+				9331355BC98B4A0021E6E8D5C2EEA12E /* Serpent-tvOS.xcconfig */,
+				3634A9F3F1B3B04F444E43035F33CF7E /* Serpent-tvOS-dummy.m */,
+				F2BB29876BC67BE6B44D4E086873FE3D /* Serpent-tvOS-prefix.pch */,
+				09287B0565854154C49ACEC2EA51C041 /* Serpent-tvOS-umbrella.h */,
+				B6CCED2DA47F6EA6C8DDAAEBE923F9FD /* Serpent-watchOS.modulemap */,
+				B029CB99EC322E6451197B07493B489A /* Serpent-watchOS.xcconfig */,
+				C71BAE3941F81879B3F5E84BA1633361 /* Serpent-watchOS-dummy.m */,
+				68F83A2CC4E923483128977635706FA9 /* Serpent-watchOS-prefix.pch */,
+				DE210B760D3855336A503BEFB260939F /* Serpent-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Serpent-iOS";
+			sourceTree = "<group>";
+		};
+		2333FED9CDD2933A0FC191C9984F9DD8 /* Pods-NStackSDK-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E7203091A661452D1BC290504D516FF3 /* Pods-NStackSDK-tvOS.modulemap */,
+				098AC83AB1AF7CF50B352801FF403FE7 /* Pods-NStackSDK-tvOS-acknowledgements.markdown */,
+				B14F03450055A46A061ADA9890609379 /* Pods-NStackSDK-tvOS-acknowledgements.plist */,
+				A06EEF0CF3FC721B6C34DD0302C29AA4 /* Pods-NStackSDK-tvOS-dummy.m */,
+				56D29F970AF4035ADB33EB0A60BC5C74 /* Pods-NStackSDK-tvOS-resources.sh */,
+				CEB3E6A2C55A1601C2F4E0F7627EC1DF /* Pods-NStackSDK-tvOS-umbrella.h */,
+				38FE2EF875AC830157919BC6A1C514CC /* Pods-NStackSDK-tvOS.debug.xcconfig */,
+				103DA7BF7B304384715BCDC25525519C /* Pods-NStackSDK-tvOS.release.xcconfig */,
+			);
+			name = "Pods-NStackSDK-tvOS";
+			path = "Target Support Files/Pods-NStackSDK-tvOS";
+			sourceTree = "<group>";
+		};
+		23E6718BB37A941B8AFDEAA02EBF7C71 /* Pods-NStackSDK-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D172873723C261C334DD59552AC57CCE /* Pods-NStackSDK-watchOS.modulemap */,
+				4DEF5290D0908CA5D62C3F8EDC8119C5 /* Pods-NStackSDK-watchOS-acknowledgements.markdown */,
+				8A4E6B9CC7BA88DCAE7C186CBD560A4B /* Pods-NStackSDK-watchOS-acknowledgements.plist */,
+				F77D52635F9C44F9597EBF6E51994160 /* Pods-NStackSDK-watchOS-dummy.m */,
+				798CBE82862F5111825F9EE4460D5A05 /* Pods-NStackSDK-watchOS-resources.sh */,
+				D99EC05E43A38E633C0A14972AF34B34 /* Pods-NStackSDK-watchOS-umbrella.h */,
+				4C3BA136C34AB3E6AF2D3A650222F107 /* Pods-NStackSDK-watchOS.debug.xcconfig */,
+				83B742CB19A6F33049DF53B16A65BEAA /* Pods-NStackSDK-watchOS.release.xcconfig */,
+			);
+			name = "Pods-NStackSDK-watchOS";
+			path = "Target Support Files/Pods-NStackSDK-watchOS";
+			sourceTree = "<group>";
+		};
+		2C5F8BED18C2BC46BE64CCD850A51635 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F91D8AA4117E32991FFDA8E62882F25 /* Pods-NStackSDK */,
+				F591AE1BC5FD0EF573B025866B3ADB96 /* Pods-NStackSDK-macOS */,
+				2333FED9CDD2933A0FC191C9984F9DD8 /* Pods-NStackSDK-tvOS */,
+				23E6718BB37A941B8AFDEAA02EBF7C71 /* Pods-NStackSDK-watchOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3370BC0A4132E17C7A20A58A057DF606 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				2376AD8294920CC70B229DA1EF4F2315 /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		36AF44CAB2CE847C0A037A45E5EE590C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2A9D57C75D6D143419DFD1E9683F5 /* Alamofire-iOS.modulemap */,
+				A54307494ADA16B8FB5E3A33323ECA0D /* Alamofire-iOS.xcconfig */,
+				7614AB0765A3B8337B6B2625DA366AF7 /* Alamofire-iOS-dummy.m */,
+				459EB0EF3F016F549D6F57E01701F087 /* Alamofire-iOS-prefix.pch */,
+				CE4BF081FBC88F2A5BE017554575443B /* Alamofire-iOS-umbrella.h */,
+				FD307638773C9ADDE725D50159BD9170 /* Alamofire-macOS.modulemap */,
+				41DF26D2E887BF6A1052478E12731724 /* Alamofire-macOS.xcconfig */,
+				40B8A4C6DCDEEB45B5CF2E7DF0272DA1 /* Alamofire-macOS-dummy.m */,
+				B01EB4DAD3C18B5C4CBFB53F069AE435 /* Alamofire-macOS-prefix.pch */,
+				0B9D1E842F1C6CFA4BD1C86F63D73F2A /* Alamofire-macOS-umbrella.h */,
+				A296C7B4C2491F63C87135E968D016E5 /* Alamofire-tvOS.modulemap */,
+				4C243B6FC8092219CF68BD0B925D2AFF /* Alamofire-tvOS.xcconfig */,
+				2D3F8D72EE4327A3A806680BD865F0E5 /* Alamofire-tvOS-dummy.m */,
+				DE8D6827F0F63AB1D019A417A3C4C975 /* Alamofire-tvOS-prefix.pch */,
+				644633937217D754398ABCBF9915BD45 /* Alamofire-tvOS-umbrella.h */,
+				7428045D914D8E85CDD9E09E0DC98431 /* Alamofire-watchOS.modulemap */,
+				C256ADE9DA730F6E37A7CF740D5F5C16 /* Alamofire-watchOS.xcconfig */,
+				A1E30EC92353B1C9BDB03FA3FEEE24D1 /* Alamofire-watchOS-dummy.m */,
+				7E5202404E3A680C9555F0CEBF2544BF /* Alamofire-watchOS-prefix.pch */,
+				51A8A742D06226FD40346AAF6B5B2439 /* Alamofire-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire-iOS";
+			sourceTree = "<group>";
+		};
+		4FF747F912E578CDF3BF0662CAE2EDBA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B42D029804A9B72003F94890C16DDC0 /* Cashier-iOS.modulemap */,
+				905BAA994003EAE48BDA46CA9FF29306 /* Cashier-iOS.xcconfig */,
+				32B43BDD64B9ED21FF7F38B30E17D0FC /* Cashier-iOS-dummy.m */,
+				7FF181964AF43649121EBDE95EC38B98 /* Cashier-iOS-prefix.pch */,
+				85BDA4EBBEC93B9D5BC4800F5AEE3799 /* Cashier-iOS-umbrella.h */,
+				278EE81BA5B0A2045E1E324ED19E0489 /* Cashier-macOS.modulemap */,
+				49CD6E8D5485FDF4CD9866D3E3831906 /* Cashier-macOS.xcconfig */,
+				BC46325D10DB91FB955BCB35A9E13BA4 /* Cashier-macOS-dummy.m */,
+				5C3ECA4FEB3CA4A8C5372FA7DA810D33 /* Cashier-macOS-prefix.pch */,
+				1D808B183246EF9C9B082F1BC89FF935 /* Cashier-macOS-umbrella.h */,
+				BAA6ECD45A811A6561A0CA0D3FA55796 /* Cashier-tvOS.modulemap */,
+				3CEF06D2CBE642CE1FF115B263CEA28F /* Cashier-tvOS.xcconfig */,
+				6751C789E9E179618F0A3DE6E2828E1C /* Cashier-tvOS-dummy.m */,
+				32E5ED9D05392DDC92B862F44C7AB1F9 /* Cashier-tvOS-prefix.pch */,
+				F17848A4CECA2BA7BBDD928C00620E04 /* Cashier-tvOS-umbrella.h */,
+				67F3AB4D63530FD8C652C0D0A9E757A0 /* Cashier-watchOS.modulemap */,
+				8326D0F0B489BFA4D4D4F5B2AE6CB34D /* Cashier-watchOS.xcconfig */,
+				0DB5603B7F98FB33093D43CFCECCA312 /* Cashier-watchOS-dummy.m */,
+				0E418CA5878ABA4CDCC80B7A0A0F4EF0 /* Cashier-watchOS-prefix.pch */,
+				61C7B7C79B25AD40B92324B8483567D5 /* Cashier-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cashier-iOS";
+			sourceTree = "<group>";
+		};
+		514197B0AE4AC1AF544980850D0093A4 /* Cashier */ = {
+			isa = PBXGroup;
+			children = (
+				ABB46B71EFCA2D022A6D924F678FC48A /* Cashier.h */,
+				DB076CCDFDFB4DBFB00A3237E36AD203 /* Cashier.m */,
+				7B6949B7AF500587FD75F3F038C5F324 /* NOPersistentStore.h */,
+				E94390660AAFD50BC1C18F2FB0E0CA46 /* NOPersistentStore.m */,
+				A6407094FACA90FAE38B3951EC9F626C /* NSString+MD5Addition.h */,
+				D297704DD322E0E1602FFC776DC6E28A /* NSString+MD5Addition.m */,
+				4FF747F912E578CDF3BF0662CAE2EDBA /* Support Files */,
+			);
+			name = Cashier;
+			path = Cashier;
+			sourceTree = "<group>";
+		};
+		7717442E109E5E9959642B665E2E2503 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				CAC63590540023031832A649E7062F17 /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D9844D9B94F35142D396498027F7A1FB /* Frameworks */,
+				87E1C9B0CFBF953A522A44C167981E61 /* Pods */,
+				8FC9F11378BA1C0887B1DC6EE002490C /* Products */,
+				2C5F8BED18C2BC46BE64CCD850A51635 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		87E1C9B0CFBF953A522A44C167981E61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95A75E89B0C2CEBCDF28BCDBE540270B /* Alamofire */,
+				514197B0AE4AC1AF544980850D0093A4 /* Cashier */,
+				17B2D3DE5A5295CCCE29E68E7CA58BFB /* Serpent */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FC9F11378BA1C0887B1DC6EE002490C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B76D2267B21B7CBF5CC6A6DF3533F280 /* libAlamofire-iOS.a */,
+				970B4C67A99EC04BA02B1F47DC78B71E /* libAlamofire-macOS.a */,
+				CB97BE28F4750C1CA2ACB2AB1A7A04B2 /* libAlamofire-tvOS.a */,
+				4CA9B35C33FB8EA2A4AF2D8A4870879C /* libAlamofire-watchOS.a */,
+				06C5F234B52F186EE6ACCD107A1F9F4F /* libCashier-iOS.a */,
+				25B01D0EEAD74E5684EF5B09DF762855 /* libCashier-macOS.a */,
+				3A6E5D32DBF7F90D175B5ADDD61B2ACC /* libCashier-tvOS.a */,
+				79B46E7002850B7C61212AFCE12E7F28 /* libCashier-watchOS.a */,
+				26DFDD5E116AB44CD16FF3CEEAEDB0AD /* libPods-NStackSDK.a */,
+				ED35F147EFDBC1DA52702B473B119FF0 /* libPods-NStackSDK-macOS.a */,
+				314A66C8D0F348801CCE6ACB4D622837 /* libPods-NStackSDK-tvOS.a */,
+				CF6F2A31DD23B4FC333123A68EE85800 /* libPods-NStackSDK-watchOS.a */,
+				1FA2B994B48881C315CBFA544B5F2D59 /* libSerpent-iOS.a */,
+				1037C6ECED6E28DBDB2D961D571A65CB /* libSerpent-macOS.a */,
+				F46FC6D99274D649E8900ACA801503C3 /* libSerpent-tvOS.a */,
+				97A21371D524D0EFACF59765B789CB55 /* libSerpent-watchOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95A75E89B0C2CEBCDF28BCDBE540270B /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				2A15322E23CE3311F42B1575BBD88CF7 /* AFError.swift */,
+				0D257D6910C0DE844734622D29F44165 /* Alamofire.swift */,
+				CF10D68E3175FB9D369215A2BB92EC2B /* DispatchQueue+Alamofire.swift */,
+				7AD738FB50C1AEC7F45BD9AB84AA48A3 /* MultipartFormData.swift */,
+				FF05AD66BAA425A37E2D6E86DFF0E056 /* NetworkReachabilityManager.swift */,
+				2EB5BD6614C1D2748E41B73D375CC2B4 /* Notifications.swift */,
+				6595BB4105A728F59F8A5A91BB0EEA4A /* ParameterEncoding.swift */,
+				6BCFB21D64A3A07969AB2CBE788B31A5 /* Request.swift */,
+				6B9E54C12CFE72FB08DC8A0743CB9E5E /* Response.swift */,
+				8EE6C71CD8DCAD9230DD91B490432356 /* ResponseSerialization.swift */,
+				DB713E5CFD119267AFC40974739F5458 /* Result.swift */,
+				7424B92D7E6866F2AC623272E3105520 /* ServerTrustPolicy.swift */,
+				72890C4DB7E7AA77496C670102187B7A /* SessionDelegate.swift */,
+				BB21D47359E74A71F7C628297F607B43 /* SessionManager.swift */,
+				5766B5638A0588F828F43061F7861E10 /* TaskDelegate.swift */,
+				7860EE116F782C93DD6424DD3F3981C6 /* Timeline.swift */,
+				077C7CA43A6F7E068B626C47AE8A13AE /* Validation.swift */,
+				36AF44CAB2CE847C0A037A45E5EE590C /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9F91D8AA4117E32991FFDA8E62882F25 /* Pods-NStackSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BB2C7C7968F4AC0C58EE549BF5ADB506 /* Pods-NStackSDK.modulemap */,
+				9155B4396D85221C000038745484AD2A /* Pods-NStackSDK-acknowledgements.markdown */,
+				7F37BE93D4938E3076DC925A93A87AA7 /* Pods-NStackSDK-acknowledgements.plist */,
+				B0004D2C2E0FF8A08BC70F792BB18BAF /* Pods-NStackSDK-dummy.m */,
+				A5918BDB023F91FC636CCA3892E1E3A9 /* Pods-NStackSDK-resources.sh */,
+				D161269747102EC163776A1F1BED2BBA /* Pods-NStackSDK-umbrella.h */,
+				E79C5FA253D0081D20393D6AC0CC80B1 /* Pods-NStackSDK.debug.xcconfig */,
+				A0AF5A32A9DEFCBC3F72EAD595391149 /* Pods-NStackSDK.release.xcconfig */,
+			);
+			name = "Pods-NStackSDK";
+			path = "Target Support Files/Pods-NStackSDK";
+			sourceTree = "<group>";
+		};
+		ABF24C8DF30414D12D596F6B288F41C9 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				F9998278E5E984107A4744AE7CC7475B /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		BD43005488EA61486EF72BD35043BAD3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EDB678C08D30D830E691FABB232E2869 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D9844D9B94F35142D396498027F7A1FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD43005488EA61486EF72BD35043BAD3 /* iOS */,
+				ABF24C8DF30414D12D596F6B288F41C9 /* OS X */,
+				3370BC0A4132E17C7A20A58A057DF606 /* tvOS */,
+				7717442E109E5E9959642B665E2E2503 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F591AE1BC5FD0EF573B025866B3ADB96 /* Pods-NStackSDK-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				405DB9EE63CEAF00BB836BD11389F04D /* Pods-NStackSDK-macOS.modulemap */,
+				0FAAC22A9F8ACB631A69B7A2D7C2918E /* Pods-NStackSDK-macOS-acknowledgements.markdown */,
+				2C4B1769CC56C5D6948D3B2F9D109FC3 /* Pods-NStackSDK-macOS-acknowledgements.plist */,
+				2F7DDCE930DE6EF0D5085DF7698B893D /* Pods-NStackSDK-macOS-dummy.m */,
+				43AC20747BF5BCCD6D563A922A2A9B9C /* Pods-NStackSDK-macOS-resources.sh */,
+				D696916274CCB3E57D3AE023A5A11A9A /* Pods-NStackSDK-macOS-umbrella.h */,
+				4427EBEB75A8561AB65A01A4E306A1E9 /* Pods-NStackSDK-macOS.debug.xcconfig */,
+				57F199913251ADF2A08A543C15E0F8E7 /* Pods-NStackSDK-macOS.release.xcconfig */,
+			);
+			name = "Pods-NStackSDK-macOS";
+			path = "Target Support Files/Pods-NStackSDK-macOS";
+			sourceTree = "<group>";
+		};
+		F75DAB1E624FDE0A711B3D90D552D2C0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5B05FDB68F71FF9F4C19B053A6D3B7CF /* BridgingBox.swift */,
+				BBD84615897065544A100910FCBD3738 /* Extensions.swift */,
+				8E4D99F0626A160113D376F84793FDDE /* Operator.swift */,
+				CDBEA4D4FB9D4372511DB4A7CADC9997 /* Serpent.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		170DBE90671C40232516D3F61A34D396 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35762A4C5FB17739704EA297BFAB8D51 /* Serpent-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37F1514687CFFB3F49BF2F13B4AD6158 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE90989C9A7C46D839D589F75780ADD /* Serpent-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4386AED4A8CB663D9B1C426C4FD947F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491B212F1632D81AB0ED5FBD31D2ED62 /* Serpent-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5823D49A6F129C3514A54EF112C57ABC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D74DE214C9CE199904B8D111D265827 /* Cashier-macOS-umbrella.h in Headers */,
+				F1F8CD0ED5A4C4337FD39071A33DFFD6 /* Cashier.h in Headers */,
+				86E8AFF9949EC95C83C0794E85697DB8 /* NOPersistentStore.h in Headers */,
+				CA90A0B29794185886E2FA7A9FF0DA79 /* NSString+MD5Addition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592C8A65EC629E28F1BE6C5D3BAED06C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5087B1D56DBF42A721A31D2B2B1A72B3 /* Pods-NStackSDK-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E7441CA049CD2257EA96754E3972DD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08FC62E8037D04905D3493FBC3B52271 /* Alamofire-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625A9F44B96182E953035A18A1B65CDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF772E647C60ECD9E79A2297BFA93E6 /* Pods-NStackSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733AE1B4AE96B3A73972CA33B4886357 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5776E1EF9BD79DB26D2353478F94137 /* Alamofire-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8955FF24B428B9BF766AFDE3B207C4A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B86C95A8C431D77F0ED7BBD10D4B74 /* Alamofire-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2E5EDD167C8EEEB1868D8DEB5D7D16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D621FE2B69211534F32D7A0CA7541ECB /* Pods-NStackSDK-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED97F5F87CC5BC4A9B433FD8D59E437 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0116FBB77C82D8F1EB228E4DEE1802 /* Serpent-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F884FE070B8EBB35595218AA95C207 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96111B4FB7B2D9202837EF0DB139230C /* Alamofire-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA7B0D354AD11B3540ADFEF3EDCDC8B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BDBC772827185D385CB90A054C98737 /* Pods-NStackSDK-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E90F1ADEDD3DAD546463A9712E3915 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C96AE98F1BD32F264BA15EF820799F /* Cashier-iOS-umbrella.h in Headers */,
+				070EE4E0B5552D6BDF02BAE35F40ED1F /* Cashier.h in Headers */,
+				576100DEB0B7EFF08F674D9270773FE7 /* NOPersistentStore.h in Headers */,
+				0FB1B2A3BE57C778AA666027B0F557A1 /* NSString+MD5Addition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFC23D409C054FCEDE545680C746AF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4621791D9C7A6A7DD6A95E8FB46AF90E /* Cashier-watchOS-umbrella.h in Headers */,
+				DEB5EA17AFDF97E9FB10079F788B1719 /* Cashier.h in Headers */,
+				BBAFDC3C3F8209F6EE6FA5E1696619B0 /* NOPersistentStore.h in Headers */,
+				3A5257F03691478DFE1462DDF4EB2E71 /* NSString+MD5Addition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C5F25F44B9DCF2E856B470FF351329 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF550C82C5DC31CBE3632B0B7AD82DB4 /* Cashier-tvOS-umbrella.h in Headers */,
+				654C40954DADF5D7D132EA33D13B289B /* Cashier.h in Headers */,
+				BF55DACB78CAEA1D7F2A5C244AA1E5D7 /* NOPersistentStore.h in Headers */,
+				08FA6C843CA2BC2C90DDAABE3C3D9C82 /* NSString+MD5Addition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01B5BAD4E0EBBF38EDD47834D94A904B /* Alamofire-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A236E4CDBBF6955D8ABAED1CFE7C6699 /* Build configuration list for PBXNativeTarget "Alamofire-macOS" */;
+			buildPhases = (
+				4E220DB3D2DB33ADAAA1F6D0026CAD53 /* Sources */,
+				CC1574998B38FF0DC198A4250F34D52E /* Frameworks */,
+				8955FF24B428B9BF766AFDE3B207C4A0 /* Headers */,
+				F7BA0B47D0226FAD0CCC61886BE79A20 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alamofire-macOS";
+			productName = "Alamofire-macOS";
+			productReference = 970B4C67A99EC04BA02B1F47DC78B71E /* libAlamofire-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		06EFF7AB21A2F20ADD557AD4AD954AA6 /* Cashier-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 290138A2B21700AA0FD66F1EFC4FE180 /* Build configuration list for PBXNativeTarget "Cashier-tvOS" */;
+			buildPhases = (
+				360371351A1973032F21D80CB15CE2DE /* Sources */,
+				D9FCFCA8197C48992A6789249B75EE0A /* Frameworks */,
+				F3C5F25F44B9DCF2E856B470FF351329 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cashier-tvOS";
+			productName = "Cashier-tvOS";
+			productReference = 3A6E5D32DBF7F90D175B5ADDD61B2ACC /* libCashier-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1243EBA6C6938ABEBCAD8B7ACD7CD62D /* Serpent-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C4A8FB7E3AAC7D4FC097902B5B4E34 /* Build configuration list for PBXNativeTarget "Serpent-iOS" */;
+			buildPhases = (
+				ED1369B3BDD804017B3CF95860B9F8DD /* Sources */,
+				74622B907F221F308A0FDAB6C4D1E9C2 /* Frameworks */,
+				AED97F5F87CC5BC4A9B433FD8D59E437 /* Headers */,
+				960FD9614844D6B3AED57F95E7BF1F88 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serpent-iOS";
+			productName = "Serpent-iOS";
+			productReference = 1FA2B994B48881C315CBFA544B5F2D59 /* libSerpent-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1249E27CF0CE38BB83A601AFECC3CABD /* Pods-NStackSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984AF375B3EC71EFC6E515178C63B38D /* Build configuration list for PBXNativeTarget "Pods-NStackSDK" */;
+			buildPhases = (
+				6D261017C19B2EF8930E05FE5C5B4C2E /* Sources */,
+				F48BBA19DA313FB8D0B7AAE6EF91B8AC /* Frameworks */,
+				625A9F44B96182E953035A18A1B65CDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5B6178FA545C17006F87459583066B1 /* PBXTargetDependency */,
+				5DD98F03A1C7AE6DE6F27A0AA1DA1634 /* PBXTargetDependency */,
+				CD10B5B3E95D7E7CF5A68B35DFF267F7 /* PBXTargetDependency */,
+			);
+			name = "Pods-NStackSDK";
+			productName = "Pods-NStackSDK";
+			productReference = 26DFDD5E116AB44CD16FF3CEEAEDB0AD /* libPods-NStackSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1EFA5E719EB6E47F15B984253254F9ED /* Serpent-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D825139ADA13C573EA16689F563D212B /* Build configuration list for PBXNativeTarget "Serpent-tvOS" */;
+			buildPhases = (
+				1CD5439BA7BC8068B04D02856E887F61 /* Sources */,
+				C8CEFE1ABA3B7AA1DB5BC884F6151244 /* Frameworks */,
+				4386AED4A8CB663D9B1C426C4FD947F4 /* Headers */,
+				C434978EEEA376820BC4BA46F245B0D0 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serpent-tvOS";
+			productName = "Serpent-tvOS";
+			productReference = F46FC6D99274D649E8900ACA801503C3 /* libSerpent-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		35C820AA92C882165013161167587413 /* Cashier-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 398DC742BFBA5C1145C3690A0D475685 /* Build configuration list for PBXNativeTarget "Cashier-iOS" */;
+			buildPhases = (
+				55015B083AFFE7D52C8C9F6969102577 /* Sources */,
+				E7DD87276C56555EEF8DB09B686FCFA7 /* Frameworks */,
+				D6E90F1ADEDD3DAD546463A9712E3915 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cashier-iOS";
+			productName = "Cashier-iOS";
+			productReference = 06C5F234B52F186EE6ACCD107A1F9F4F /* libCashier-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		872B597965CEC067CE4DC12FD365FC8A /* Pods-NStackSDK-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E4630D69D127CE2A816B0BE644BC40B /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-watchOS" */;
+			buildPhases = (
+				61A882B31F25E72CE90CEBA4116413DE /* Sources */,
+				B655CD1D3339456DB160BFF62CBB3527 /* Frameworks */,
+				CCA7B0D354AD11B3540ADFEF3EDCDC8B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88D7F72E60BEDA7E89B4DDE4CC8EB92F /* PBXTargetDependency */,
+				9F001CB8252077847BD86ACEAD6D1D2D /* PBXTargetDependency */,
+				1AD244233CD2A2F86428E32A2F390FD1 /* PBXTargetDependency */,
+			);
+			name = "Pods-NStackSDK-watchOS";
+			productName = "Pods-NStackSDK-watchOS";
+			productReference = CF6F2A31DD23B4FC333123A68EE85800 /* libPods-NStackSDK-watchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		89112AD98E63E0FFBD24E00EE56BB52E /* Alamofire-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E69F21DD65EAB7605D4503DAC32F718 /* Build configuration list for PBXNativeTarget "Alamofire-watchOS" */;
+			buildPhases = (
+				8A2B08CA9BDCB83EE359314C04BE73EC /* Sources */,
+				8848D63E81422E238AAE12CE3DC87547 /* Frameworks */,
+				5E7441CA049CD2257EA96754E3972DD0 /* Headers */,
+				09514FC3D6FD05EC46CE86F0D2751768 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alamofire-watchOS";
+			productName = "Alamofire-watchOS";
+			productReference = 4CA9B35C33FB8EA2A4AF2D8A4870879C /* libAlamofire-watchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8A51754421195D40D1C0EDEF34F02A05 /* Pods-NStackSDK-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E3377024035AD87226D3E56E075945 /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-tvOS" */;
+			buildPhases = (
+				DB2B19A05536E33A6688A5863204D825 /* Sources */,
+				362787EECDBD275418B9E05463BAE65F /* Frameworks */,
+				592C8A65EC629E28F1BE6C5D3BAED06C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98A90CF4A136837600A00FC725733FAF /* PBXTargetDependency */,
+				5DE96F68B8358A28234DD7B6DFC0C898 /* PBXTargetDependency */,
+				1BE96F9D68939541D3BDF94320D0405F /* PBXTargetDependency */,
+			);
+			name = "Pods-NStackSDK-tvOS";
+			productName = "Pods-NStackSDK-tvOS";
+			productReference = 314A66C8D0F348801CCE6ACB4D622837 /* libPods-NStackSDK-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B82B4982BA0C670E44FEB045B30F1DC7 /* Serpent-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1030E54275B36FA3A6F3928E3719238E /* Build configuration list for PBXNativeTarget "Serpent-macOS" */;
+			buildPhases = (
+				512ED8E22AF7EEDEC7521E258DAC3234 /* Sources */,
+				C0A650442541BA67D5F64468BE21FB57 /* Frameworks */,
+				170DBE90671C40232516D3F61A34D396 /* Headers */,
+				9EFC9768BC833D87923227DC827B7781 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serpent-macOS";
+			productName = "Serpent-macOS";
+			productReference = 1037C6ECED6E28DBDB2D961D571A65CB /* libSerpent-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BE964E6FE1CF202D2B2CEF3CB86320BF /* Cashier-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFBB3BEBB978A659279C413ADC8D7D35 /* Build configuration list for PBXNativeTarget "Cashier-macOS" */;
+			buildPhases = (
+				332D92920024F0E3E28B1FC011E8FD63 /* Sources */,
+				AE27487E38740C5AFFE1488B0FD07DC1 /* Frameworks */,
+				5823D49A6F129C3514A54EF112C57ABC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cashier-macOS";
+			productName = "Cashier-macOS";
+			productReference = 25B01D0EEAD74E5684EF5B09DF762855 /* libCashier-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C5FD0FD1017A04FA74AA22B6A1A5C9E2 /* Cashier-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF638005B3BECFD1760396162B0235E1 /* Build configuration list for PBXNativeTarget "Cashier-watchOS" */;
+			buildPhases = (
+				80A53EDA0BA6FA0B2E7A76966D92E057 /* Sources */,
+				7F99A4DA631C4608581949A5B43577E7 /* Frameworks */,
+				DFFC23D409C054FCEDE545680C746AF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cashier-watchOS";
+			productName = "Cashier-watchOS";
+			productReference = 79B46E7002850B7C61212AFCE12E7F28 /* libCashier-watchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D0B4E9342A82F96D8127FA2F5D360F36 /* Pods-NStackSDK-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2205BB69736963ED46B078625C0A5F7 /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-macOS" */;
+			buildPhases = (
+				8B974B0CDC6F274AF3DFB49AB540B63C /* Sources */,
+				5627990322F168CB7EED6725949FF928 /* Frameworks */,
+				9C2E5EDD167C8EEEB1868D8DEB5D7D16 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA28F4DCF2532FACBEB6DC35D971284 /* PBXTargetDependency */,
+				276D65443BC95372DD8EB38A19E1FC31 /* PBXTargetDependency */,
+				B33877EC06C157FEAABA9D4D0DEF6C08 /* PBXTargetDependency */,
+			);
+			name = "Pods-NStackSDK-macOS";
+			productName = "Pods-NStackSDK-macOS";
+			productReference = ED35F147EFDBC1DA52702B473B119FF0 /* libPods-NStackSDK-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D1798402F7232BB55F19A0E5A0EADD36 /* Alamofire-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51E02CF8987839BD2C6FF950B7A9AAAD /* Build configuration list for PBXNativeTarget "Alamofire-iOS" */;
+			buildPhases = (
+				091248CEE730836006B9B0D34BBB61FD /* Sources */,
+				406BA51BA379033092385FF2A2683294 /* Frameworks */,
+				C4F884FE070B8EBB35595218AA95C207 /* Headers */,
+				54B1DEE954A091ECC32E16415578AB73 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alamofire-iOS";
+			productName = "Alamofire-iOS";
+			productReference = B76D2267B21B7CBF5CC6A6DF3533F280 /* libAlamofire-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7CFB5C17CE6241E57E9F2991789781C /* Alamofire-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36F3A96351D88C633D3CBED66B1377A7 /* Build configuration list for PBXNativeTarget "Alamofire-tvOS" */;
+			buildPhases = (
+				4B1C3BC47A3AD49E2237BDA81F39C8A0 /* Sources */,
+				8B031ED540AA695C9586C246FAD76920 /* Frameworks */,
+				733AE1B4AE96B3A73972CA33B4886357 /* Headers */,
+				8562C60A6730738080B1746B6F5CAA41 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alamofire-tvOS";
+			productName = "Alamofire-tvOS";
+			productReference = CB97BE28F4750C1CA2ACB2AB1A7A04B2 /* libAlamofire-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F85F5669828DF2F30FAD1141CE6D12D4 /* Serpent-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8234ED0585917E6CF58DF344E8BE26 /* Build configuration list for PBXNativeTarget "Serpent-watchOS" */;
+			buildPhases = (
+				D9C44F351BAED4565647446CCD38B6FF /* Sources */,
+				3D8FC5225D23EF13D34D111632FB334E /* Frameworks */,
+				37F1514687CFFB3F49BF2F13B4AD6158 /* Headers */,
+				7861789B09A84DB10A7740F8A9E9193A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Serpent-watchOS";
+			productName = "Serpent-watchOS";
+			productReference = 97A21371D524D0EFACF59765B789CB55 /* libSerpent-watchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8FC9F11378BA1C0887B1DC6EE002490C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1798402F7232BB55F19A0E5A0EADD36 /* Alamofire-iOS */,
+				01B5BAD4E0EBBF38EDD47834D94A904B /* Alamofire-macOS */,
+				E7CFB5C17CE6241E57E9F2991789781C /* Alamofire-tvOS */,
+				89112AD98E63E0FFBD24E00EE56BB52E /* Alamofire-watchOS */,
+				35C820AA92C882165013161167587413 /* Cashier-iOS */,
+				BE964E6FE1CF202D2B2CEF3CB86320BF /* Cashier-macOS */,
+				06EFF7AB21A2F20ADD557AD4AD954AA6 /* Cashier-tvOS */,
+				C5FD0FD1017A04FA74AA22B6A1A5C9E2 /* Cashier-watchOS */,
+				1249E27CF0CE38BB83A601AFECC3CABD /* Pods-NStackSDK */,
+				D0B4E9342A82F96D8127FA2F5D360F36 /* Pods-NStackSDK-macOS */,
+				8A51754421195D40D1C0EDEF34F02A05 /* Pods-NStackSDK-tvOS */,
+				872B597965CEC067CE4DC12FD365FC8A /* Pods-NStackSDK-watchOS */,
+				1243EBA6C6938ABEBCAD8B7ACD7CD62D /* Serpent-iOS */,
+				B82B4982BA0C670E44FEB045B30F1DC7 /* Serpent-macOS */,
+				1EFA5E719EB6E47F15B984253254F9ED /* Serpent-tvOS */,
+				F85F5669828DF2F30FAD1141CE6D12D4 /* Serpent-watchOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09514FC3D6FD05EC46CE86F0D2751768 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-watchOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-watchOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-watchOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-watchOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		54B1DEE954A091ECC32E16415578AB73 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-iOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-iOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-iOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-iOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		7861789B09A84DB10A7740F8A9E9193A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-watchOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-watchOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Serpent-watchOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-watchOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-watchOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		8562C60A6730738080B1746B6F5CAA41 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-tvOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-tvOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-tvOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-tvOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		960FD9614844D6B3AED57F95E7BF1F88 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-iOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-iOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Serpent-iOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-iOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-iOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		9EFC9768BC833D87923227DC827B7781 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-macOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-macOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Serpent-macOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-macOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-macOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		C434978EEEA376820BC4BA46F245B0D0 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-tvOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Serpent/Serpent-tvOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Serpent-tvOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-tvOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Serpent/Serpent-tvOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		F7BA0B47D0226FAD0CCC61886BE79A20 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-macOS.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-macOS-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-macOS.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-macOS-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091248CEE730836006B9B0D34BBB61FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994F79A4FB5E31BF33CE42F7B9DA3130 /* AFError.swift in Sources */,
+				A77DAF43058E4FA62BC6C13ACFEDB475 /* Alamofire-iOS-dummy.m in Sources */,
+				32577BE28D0ED3C02D47ED4925D4256C /* Alamofire.swift in Sources */,
+				71EAC22B05F67AE3CEEF07AB8E69628C /* DispatchQueue+Alamofire.swift in Sources */,
+				52DF67BB4A5737BC02AA046B66FA430D /* MultipartFormData.swift in Sources */,
+				4A822D6A89F6E155609ACFA4A4C0958F /* NetworkReachabilityManager.swift in Sources */,
+				7379616A72787EDC6EF22D1F4CFA465A /* Notifications.swift in Sources */,
+				5440F6F8FD517B6E256F44066CCB78B8 /* ParameterEncoding.swift in Sources */,
+				68101B61DD31C1024F6B133AC61E9F88 /* Request.swift in Sources */,
+				ABD9DED95BDBB6D33DF8596F008A95D1 /* Response.swift in Sources */,
+				D206E31A54EEA58F2009D60E5EB84115 /* ResponseSerialization.swift in Sources */,
+				1151052A6FB8E11169A8414FE247CB65 /* Result.swift in Sources */,
+				1FF187BA6507B0D91C37D7B54735C659 /* ServerTrustPolicy.swift in Sources */,
+				5BB6087B378A2CEBC18FEA8982A298A6 /* SessionDelegate.swift in Sources */,
+				43A6D18D4E706CDB9B547F48D431F99D /* SessionManager.swift in Sources */,
+				D77B2E835559797D5BE7D5DEC4B7F451 /* TaskDelegate.swift in Sources */,
+				5533E2CAC7021C5490044ADA72C6D399 /* Timeline.swift in Sources */,
+				7DBD11F0CAB869B4FFF96EC55486FFD0 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD5439BA7BC8068B04D02856E887F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDFA2A77F53E8F4138AF627C45899FF /* BridgingBox.swift in Sources */,
+				784DBCD20BFEBCEECC0EFCF515A5F1B3 /* Extensions.swift in Sources */,
+				FDD026087657B3EDB5A75F5CDE7FFF86 /* Operator.swift in Sources */,
+				474E8AEB6B87731CE87BBB45C569D71B /* Serpent-tvOS-dummy.m in Sources */,
+				53809D264B67A08B9B78C308ED240D2A /* Serpent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332D92920024F0E3E28B1FC011E8FD63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D9451B798D73D6643FF334C3E10C6F /* Cashier-macOS-dummy.m in Sources */,
+				45D5ACC0B7871A9F25689234BD8C1247 /* Cashier.m in Sources */,
+				83DC33CCACF286AF26D659050DCBC2A1 /* NOPersistentStore.m in Sources */,
+				8BC723FEAABD5B2314FE26F9F3E7B878 /* NSString+MD5Addition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		360371351A1973032F21D80CB15CE2DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5C1DC63CF427815A604B16F9F4B416 /* Cashier-tvOS-dummy.m in Sources */,
+				4DD8B0DE73E6A9A194AE3055561F361E /* Cashier.m in Sources */,
+				095996B7BCE8E4A98DAE0A4719A364DC /* NOPersistentStore.m in Sources */,
+				8914DE73DF10EB70368A74FC6E17510C /* NSString+MD5Addition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1C3BC47A3AD49E2237BDA81F39C8A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9401888389B980E7CA4265E038A7D15B /* AFError.swift in Sources */,
+				E5E1918F2C50AA77DFA6EDBCA1529811 /* Alamofire-tvOS-dummy.m in Sources */,
+				D84DA155E20507E6FE9F0C3EE024D8EB /* Alamofire.swift in Sources */,
+				EFD0A2753F4D1C467CBD3C7E045636B5 /* DispatchQueue+Alamofire.swift in Sources */,
+				934ECB9FB04DAC0901A529D8F1D5A325 /* MultipartFormData.swift in Sources */,
+				FB34F34AA313AA5358AB76711F74A0E9 /* NetworkReachabilityManager.swift in Sources */,
+				909E2F6D81F17C1624CB1D2A5CBAFE43 /* Notifications.swift in Sources */,
+				90FD2C460C1F88BD22C714CE1597726D /* ParameterEncoding.swift in Sources */,
+				0F01C316721C2FAB23E02F0F692FB04D /* Request.swift in Sources */,
+				9A56F5EB12EEDD881F90CCBBDE4D0E3B /* Response.swift in Sources */,
+				771475E9EE3330A05CF7D36BCEF29480 /* ResponseSerialization.swift in Sources */,
+				854CD0BBBA97B6A40B6EA6DC54A47D3F /* Result.swift in Sources */,
+				03FE406B66F27D5CC9B94D7939C1E156 /* ServerTrustPolicy.swift in Sources */,
+				14F1E7052B1D96C735DBAD038A031D5F /* SessionDelegate.swift in Sources */,
+				AC6F6C1BDE4526BBF6FDD38DF733920E /* SessionManager.swift in Sources */,
+				C90F899EEB4EBC5537621F391ADFAA27 /* TaskDelegate.swift in Sources */,
+				9B3B1402B6164FF5C79E5354CD0AAD7D /* Timeline.swift in Sources */,
+				69BD04FEB76A7730301F77D72C0632CE /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E220DB3D2DB33ADAAA1F6D0026CAD53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFC80BC9B893EF8E0592D786AAC9516 /* AFError.swift in Sources */,
+				DD7ED1E44A026BBE64EAFF5854D9DA52 /* Alamofire-macOS-dummy.m in Sources */,
+				37AA8CB096C9149F9C284E46104D483B /* Alamofire.swift in Sources */,
+				2828B98896711CD4C45A4DF9EEB45334 /* DispatchQueue+Alamofire.swift in Sources */,
+				DCF2A8AFABA6C4C5F036D7275E79A572 /* MultipartFormData.swift in Sources */,
+				1D19DDFFD63468C6EF61A477C7536E8A /* NetworkReachabilityManager.swift in Sources */,
+				949BED195CA78DFC6C1B58C895BB9B68 /* Notifications.swift in Sources */,
+				5F6CDA492B074416F5BCA27B63F8BE54 /* ParameterEncoding.swift in Sources */,
+				BAC3B4E7BAC601CB623C162341453E53 /* Request.swift in Sources */,
+				785C8A3C8DF8C7B39E6D646AB4908E98 /* Response.swift in Sources */,
+				140BD26892A4D680DAFDD395F446E18A /* ResponseSerialization.swift in Sources */,
+				CF9ED2E8D9CDB9B82ECC55F587EB7031 /* Result.swift in Sources */,
+				9FC7550B3E01AB535B7325A65BEB75E1 /* ServerTrustPolicy.swift in Sources */,
+				710595D97D8E6E7D4952D05E2E933065 /* SessionDelegate.swift in Sources */,
+				C1995CCB17804FB8A4C9BE09A110697B /* SessionManager.swift in Sources */,
+				B1B97176DD990A61BD7FC6418F89D376 /* TaskDelegate.swift in Sources */,
+				9A1078C715430DFE970A68799D5B0C1D /* Timeline.swift in Sources */,
+				DF8BCDBCB98EE807ECDB481CE7B1A7B7 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		512ED8E22AF7EEDEC7521E258DAC3234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28C5C37FD67682B909DAD1566C42FB5 /* BridgingBox.swift in Sources */,
+				E7F5FCAA3F589176DE94DAEA2A0275A3 /* Extensions.swift in Sources */,
+				6811462E7984187DCEE49B23EC3EECC1 /* Operator.swift in Sources */,
+				CB8DC89DF42E2417917176A7D6E186DE /* Serpent-macOS-dummy.m in Sources */,
+				93A9F0B6A5C754604E079DDFBF4D1AEB /* Serpent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55015B083AFFE7D52C8C9F6969102577 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56F1C3A45041CB0784703B51C229CF78 /* Cashier-iOS-dummy.m in Sources */,
+				B4F671F2F4691C396F132D6D7EB71B66 /* Cashier.m in Sources */,
+				EACC1E0556C849C08597C45CB5C141D0 /* NOPersistentStore.m in Sources */,
+				60EB2C7FD49531945B864B79D526AD37 /* NSString+MD5Addition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61A882B31F25E72CE90CEBA4116413DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF0BB8B9087FB5E33B919B281AD9D58 /* Pods-NStackSDK-watchOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D261017C19B2EF8930E05FE5C5B4C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C7CBF15BC38C3F1300305345A15FCE /* Pods-NStackSDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80A53EDA0BA6FA0B2E7A76966D92E057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D189FC7E00B189683770634879EBA758 /* Cashier-watchOS-dummy.m in Sources */,
+				3561097155E2B8150382127C9CEA32EF /* Cashier.m in Sources */,
+				B29DCB0FDA522318423C8803263A2343 /* NOPersistentStore.m in Sources */,
+				5ACB435BD68CF4EF92E81CAB1554CEA7 /* NSString+MD5Addition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A2B08CA9BDCB83EE359314C04BE73EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06DF3FC4D3B067B9449DC4B91DB484DD /* AFError.swift in Sources */,
+				1053F2F45C216760B28B1F79AA1B0B3E /* Alamofire-watchOS-dummy.m in Sources */,
+				2A6643E958EF3E4562B32633552C572C /* Alamofire.swift in Sources */,
+				9AA0629F5D8A82280AA32D6F3A89790F /* DispatchQueue+Alamofire.swift in Sources */,
+				BDBFD1E099B0F81F853ED4E566895137 /* MultipartFormData.swift in Sources */,
+				E110AF94E109F2F5D93EE6A92DBD9794 /* NetworkReachabilityManager.swift in Sources */,
+				CEA3BD6EEC11BDA218B6CCCEE5BBB657 /* Notifications.swift in Sources */,
+				3BE5A99FEED5CC07EB63F3F1B578D419 /* ParameterEncoding.swift in Sources */,
+				07890E65403D9C0A6707E332E82B412A /* Request.swift in Sources */,
+				8E8E3CF9AAF3AC39EF70B7326E8A59DF /* Response.swift in Sources */,
+				E4D330BB5B9F8B60F175283019D4CDBC /* ResponseSerialization.swift in Sources */,
+				D50385E97CBAFFF2BE8F41B541688547 /* Result.swift in Sources */,
+				548FA2B3C99C9A693674654C5D3332B7 /* ServerTrustPolicy.swift in Sources */,
+				CB8D8B65CBB4EAFB905C110B040734B5 /* SessionDelegate.swift in Sources */,
+				874A6964983EFFF7B82AE7B36A363AB3 /* SessionManager.swift in Sources */,
+				0AA846DE272A1AED7E2508C9F29AC60D /* TaskDelegate.swift in Sources */,
+				5B70A53A6739C9C8227E55DDF3CBA209 /* Timeline.swift in Sources */,
+				8D5A498DB91F973EB187773085F42E06 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B974B0CDC6F274AF3DFB49AB540B63C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D708B84864841BA9A4CEEAEDF34C5113 /* Pods-NStackSDK-macOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C44F351BAED4565647446CCD38B6FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E0C98FF720973E6E0270C455354D7E /* BridgingBox.swift in Sources */,
+				DA86CC2F130188C90E1D5B34C8C077B7 /* Extensions.swift in Sources */,
+				BD6FFA280278DC2148738697AB37497B /* Operator.swift in Sources */,
+				B7C484D6AC33AFC896EEE6D5E218020C /* Serpent-watchOS-dummy.m in Sources */,
+				E45A88FC3BC83CC01645D17BF113A41C /* Serpent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB2B19A05536E33A6688A5863204D825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E29D884FC15F3CEE6760C4F46DDAC4F /* Pods-NStackSDK-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED1369B3BDD804017B3CF95860B9F8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACAFD445D2720C779B69AB2EA3AD712 /* BridgingBox.swift in Sources */,
+				79E81C59475532D7F2DC13EE19BF4771 /* Extensions.swift in Sources */,
+				D8BD0E0BC90CD76F845CA366F6BB08E2 /* Operator.swift in Sources */,
+				0A5A654E203F0F782499DB29E69316F2 /* Serpent-iOS-dummy.m in Sources */,
+				5E24683B79F3E7616CE8F09C77638FC9 /* Serpent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AD244233CD2A2F86428E32A2F390FD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Serpent-watchOS";
+			target = F85F5669828DF2F30FAD1141CE6D12D4 /* Serpent-watchOS */;
+			targetProxy = 56E77288DF6943DA5A3A5EC508D79456 /* PBXContainerItemProxy */;
+		};
+		1BE96F9D68939541D3BDF94320D0405F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Serpent-tvOS";
+			target = 1EFA5E719EB6E47F15B984253254F9ED /* Serpent-tvOS */;
+			targetProxy = 2885DECB7CB4D85C4E0C8698DCE68682 /* PBXContainerItemProxy */;
+		};
+		276D65443BC95372DD8EB38A19E1FC31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cashier-macOS";
+			target = BE964E6FE1CF202D2B2CEF3CB86320BF /* Cashier-macOS */;
+			targetProxy = F9D0CBD797E05282D56B5AC2430D0C4A /* PBXContainerItemProxy */;
+		};
+		5DD98F03A1C7AE6DE6F27A0AA1DA1634 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cashier-iOS";
+			target = 35C820AA92C882165013161167587413 /* Cashier-iOS */;
+			targetProxy = 550E8BD6EF760551C2D347022D98ED7E /* PBXContainerItemProxy */;
+		};
+		5DE96F68B8358A28234DD7B6DFC0C898 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cashier-tvOS";
+			target = 06EFF7AB21A2F20ADD557AD4AD954AA6 /* Cashier-tvOS */;
+			targetProxy = EDB2445B5909D5581D74C18C8CBF5198 /* PBXContainerItemProxy */;
+		};
+		88D7F72E60BEDA7E89B4DDE4CC8EB92F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-watchOS";
+			target = 89112AD98E63E0FFBD24E00EE56BB52E /* Alamofire-watchOS */;
+			targetProxy = 69AD43CB59ED87E7C962DD32805E1098 /* PBXContainerItemProxy */;
+		};
+		98A90CF4A136837600A00FC725733FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-tvOS";
+			target = E7CFB5C17CE6241E57E9F2991789781C /* Alamofire-tvOS */;
+			targetProxy = 08C83D1A65EEB8760762F3C2EA4B42C6 /* PBXContainerItemProxy */;
+		};
+		9F001CB8252077847BD86ACEAD6D1D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cashier-watchOS";
+			target = C5FD0FD1017A04FA74AA22B6A1A5C9E2 /* Cashier-watchOS */;
+			targetProxy = E62ACBD78C8E1B2FF9D5CBEA057A434D /* PBXContainerItemProxy */;
+		};
+		B33877EC06C157FEAABA9D4D0DEF6C08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Serpent-macOS";
+			target = B82B4982BA0C670E44FEB045B30F1DC7 /* Serpent-macOS */;
+			targetProxy = 42FC584743A94E60C0554ECD41A8EC82 /* PBXContainerItemProxy */;
+		};
+		CD10B5B3E95D7E7CF5A68B35DFF267F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Serpent-iOS";
+			target = 1243EBA6C6938ABEBCAD8B7ACD7CD62D /* Serpent-iOS */;
+			targetProxy = 880F5CBF1AC7103C3554D7BE6ECC1671 /* PBXContainerItemProxy */;
+		};
+		DEA28F4DCF2532FACBEB6DC35D971284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-macOS";
+			target = 01B5BAD4E0EBBF38EDD47834D94A904B /* Alamofire-macOS */;
+			targetProxy = E541BCA1AE78826669E4ABBF268FD7F4 /* PBXContainerItemProxy */;
+		};
+		E5B6178FA545C17006F87459583066B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-iOS";
+			target = D1798402F7232BB55F19A0E5A0EADD36 /* Alamofire-iOS */;
+			targetProxy = D3B4E691F80E527AA1C5A04FA0B39C12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01901DB066C2BC7CA41D464DEE50ECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AEF0940A5E707C04DFF0C8FE05A503 /* Serpent-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-iOS/Serpent-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FEE1A1C50FF7D6C4192FA7DF0E117C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9331355BC98B4A0021E6E8D5C2EEA12E /* Serpent-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-tvOS/Serpent-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14EAF820E9038D7E3BA4BB1E1C17038E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C243B6FC8092219CF68BD0B925D2AFF /* Alamofire-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-tvOS/Alamofire-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		22C3BE5C54F6A3FB13EE3EB11E825E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DF81E58418927A4C5AB1848AFE7726 /* Serpent-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-macOS/Serpent-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2590466E8601C0B20C7DD88A19E96A29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AEF0940A5E707C04DFF0C8FE05A503 /* Serpent-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-iOS/Serpent-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A851293F697322FBF0CBE545E175D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41DF26D2E887BF6A1052478E12731724 /* Alamofire-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-macOS/Alamofire-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3BE554F9EBEC70F218D4D62F5153F658 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8326D0F0B489BFA4D4D4F5B2AE6CB34D /* Cashier-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-watchOS/Cashier-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		3D7522DD6278ED960F9B5E90C191CB34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEF06D2CBE642CE1FF115B263CEA28F /* Cashier-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-tvOS/Cashier-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43937A894758123420BADBB8D8CBE84D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 103DA7BF7B304384715BCDC25525519C /* Pods-NStackSDK-tvOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-tvOS/Pods-NStackSDK-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		485467E93288379DF8FE08500F1FC041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54307494ADA16B8FB5E3A33323ECA0D /* Alamofire-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-iOS/Alamofire-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61BCA2A36F4B36BD794C2A0DDDAFAA29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9331355BC98B4A0021E6E8D5C2EEA12E /* Serpent-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-tvOS/Serpent-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		624651FF354B3D9B7F358A516B83954D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		653E4E7AC932B2671B5754D30EE4FC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41DF26D2E887BF6A1052478E12731724 /* Alamofire-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-macOS/Alamofire-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6B7762B8B03418017224C4F5CE632C9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		7A0957D0105BC6414ECDAF93AE2F9117 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49CD6E8D5485FDF4CD9866D3E3831906 /* Cashier-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-macOS/Cashier-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D73A091315813B1EBB3AF0E25DE460E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 905BAA994003EAE48BDA46CA9FF29306 /* Cashier-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-iOS/Cashier-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DD71B415E0FDD6D34DCAA99D5D141E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C256ADE9DA730F6E37A7CF740D5F5C16 /* Alamofire-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-watchOS/Alamofire-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		9620DF6038E80679459FB6DF0A28D534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1DF81E58418927A4C5AB1848AFE7726 /* Serpent-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-macOS/Serpent-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A172B9B5D3E52689BCC28CA345AE4D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C256ADE9DA730F6E37A7CF740D5F5C16 /* Alamofire-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-watchOS/Alamofire-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		AC23FD6DA72064BB13D033FB8E9F0B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEF06D2CBE642CE1FF115B263CEA28F /* Cashier-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-tvOS/Cashier-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		AEE5449341B09DF6BFF1849151C0F110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4427EBEB75A8561AB65A01A4E306A1E9 /* Pods-NStackSDK-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-macOS/Pods-NStackSDK-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B419D67BA4729174729394BE2D675340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54307494ADA16B8FB5E3A33323ECA0D /* Alamofire-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-iOS/Alamofire-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC8FB1756F268DA1249E3A7679A60E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 905BAA994003EAE48BDA46CA9FF29306 /* Cashier-iOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-iOS/Cashier-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6D736DDC0F8E5BAB4A2995BB17300FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8326D0F0B489BFA4D4D4F5B2AE6CB34D /* Cashier-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-watchOS/Cashier-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		C859CDFC61811C28297512C1AD5B0401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0AF5A32A9DEFCBC3F72EAD595391149 /* Pods-NStackSDK.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK/Pods-NStackSDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDF81C3AE3E87D00FDC638AA3F394C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B742CB19A6F33049DF53B16A65BEAA /* Pods-NStackSDK-watchOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-watchOS/Pods-NStackSDK-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		D7FE4A646D7FD6FABC91A812D29DF822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C243B6FC8092219CF68BD0B925D2AFF /* Alamofire-tvOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-tvOS/Alamofire-tvOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Alamofire/Alamofire-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = "Alamofire-tvOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7FE5E86A94FF6C1884A93FD2F6F58D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F199913251ADF2A08A543C15E0F8E7 /* Pods-NStackSDK-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-macOS/Pods-NStackSDK-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		EEB14A184E59958809B163A9D5DF8AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38FE2EF875AC830157919BC6A1C514CC /* Pods-NStackSDK-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-tvOS/Pods-NStackSDK-tvOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		EF5B924672D65FB5C7F9350397B69125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B029CB99EC322E6451197B07493B489A /* Serpent-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-watchOS/Serpent-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		EF68F18D65A6176AA131E860D8871C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49CD6E8D5485FDF4CD9866D3E3831906 /* Cashier-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Cashier-macOS/Cashier-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Headers/Public/Cashier/Cashier-macOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Cashier;
+				PRODUCT_NAME = "Cashier-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F398A56DB40F4714600002F51FBC8FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79C5FA253D0081D20393D6AC0CC80B1 /* Pods-NStackSDK.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK/Pods-NStackSDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8FE3EBA91626987F7EBDFFC3130AB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3BA136C34AB3E6AF2D3A650222F107 /* Pods-NStackSDK-watchOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NStackSDK-watchOS/Pods-NStackSDK-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		FF0362741BAC3F1D682E1C175FD1E8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B029CB99EC322E6451197B07493B489A /* Serpent-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Serpent-watchOS/Serpent-watchOS-prefix.pch";
+				MODULEMAP_FILE = "Headers/Public/Serpent/Serpent-watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Serpent;
+				PRODUCT_NAME = "Serpent-watchOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E4630D69D127CE2A816B0BE644BC40B /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8FE3EBA91626987F7EBDFFC3130AB17 /* Debug */,
+				CDF81C3AE3E87D00FDC638AA3F394C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1030E54275B36FA3A6F3928E3719238E /* Build configuration list for PBXNativeTarget "Serpent-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9620DF6038E80679459FB6DF0A28D534 /* Debug */,
+				22C3BE5C54F6A3FB13EE3EB11E825E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E3377024035AD87226D3E56E075945 /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEB14A184E59958809B163A9D5DF8AA5 /* Debug */,
+				43937A894758123420BADBB8D8CBE84D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		290138A2B21700AA0FD66F1EFC4FE180 /* Build configuration list for PBXNativeTarget "Cashier-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC23FD6DA72064BB13D033FB8E9F0B03 /* Debug */,
+				3D7522DD6278ED960F9B5E90C191CB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7762B8B03418017224C4F5CE632C9D /* Debug */,
+				624651FF354B3D9B7F358A516B83954D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36F3A96351D88C633D3CBED66B1377A7 /* Build configuration list for PBXNativeTarget "Alamofire-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EAF820E9038D7E3BA4BB1E1C17038E /* Debug */,
+				D7FE4A646D7FD6FABC91A812D29DF822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		398DC742BFBA5C1145C3690A0D475685 /* Build configuration list for PBXNativeTarget "Cashier-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D73A091315813B1EBB3AF0E25DE460E /* Debug */,
+				BC8FB1756F268DA1249E3A7679A60E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51E02CF8987839BD2C6FF950B7A9AAAD /* Build configuration list for PBXNativeTarget "Alamofire-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				485467E93288379DF8FE08500F1FC041 /* Debug */,
+				B419D67BA4729174729394BE2D675340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E69F21DD65EAB7605D4503DAC32F718 /* Build configuration list for PBXNativeTarget "Alamofire-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD71B415E0FDD6D34DCAA99D5D141E1 /* Debug */,
+				A172B9B5D3E52689BCC28CA345AE4D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8234ED0585917E6CF58DF344E8BE26 /* Build configuration list for PBXNativeTarget "Serpent-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0362741BAC3F1D682E1C175FD1E8C2 /* Debug */,
+				EF5B924672D65FB5C7F9350397B69125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984AF375B3EC71EFC6E515178C63B38D /* Build configuration list for PBXNativeTarget "Pods-NStackSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F398A56DB40F4714600002F51FBC8FC5 /* Debug */,
+				C859CDFC61811C28297512C1AD5B0401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2205BB69736963ED46B078625C0A5F7 /* Build configuration list for PBXNativeTarget "Pods-NStackSDK-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEE5449341B09DF6BFF1849151C0F110 /* Debug */,
+				D7FE5E86A94FF6C1884A93FD2F6F58D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A236E4CDBBF6955D8ABAED1CFE7C6699 /* Build configuration list for PBXNativeTarget "Alamofire-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A851293F697322FBF0CBE545E175D27 /* Debug */,
+				653E4E7AC932B2671B5754D30EE4FC8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF638005B3BECFD1760396162B0235E1 /* Build configuration list for PBXNativeTarget "Cashier-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE554F9EBEC70F218D4D62F5153F658 /* Debug */,
+				C6D736DDC0F8E5BAB4A2995BB17300FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C4A8FB7E3AAC7D4FC097902B5B4E34 /* Build configuration list for PBXNativeTarget "Serpent-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01901DB066C2BC7CA41D464DEE50ECF6 /* Debug */,
+				2590466E8601C0B20C7DD88A19E96A29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D825139ADA13C573EA16689F563D212B /* Build configuration list for PBXNativeTarget "Serpent-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61BCA2A36F4B36BD794C2A0DDDAFAA29 /* Debug */,
+				0FEE1A1C50FF7D6C4192FA7DF0E117C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFBB3BEBB978A659279C413ADC8D7D35 /* Build configuration list for PBXNativeTarget "Cashier-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A0957D0105BC6414ECDAF93AE2F9117 /* Debug */,
+				EF68F18D65A6176AA131E860D8871C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+module Pods_NStackSDK_watchOS [system] {
+  umbrella header "Pods-NStackSDK-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

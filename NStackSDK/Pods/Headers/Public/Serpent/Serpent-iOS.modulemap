@@ -1,0 +1,9 @@
+module Serpent [system] {
+  umbrella header "Serpent-iOS-umbrella.h"
+  exclude header "Serpent-macOS-umbrella.h"
+  exclude header "Serpent-tvOS-umbrella.h"
+  exclude header "Serpent-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

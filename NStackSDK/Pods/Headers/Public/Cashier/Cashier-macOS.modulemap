@@ -1,0 +1,9 @@
+module Cashier [system] {
+  umbrella header "Cashier-macOS-umbrella.h"
+  exclude header "Cashier-iOS-umbrella.h"
+  exclude header "Cashier-tvOS-umbrella.h"
+  exclude header "Cashier-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

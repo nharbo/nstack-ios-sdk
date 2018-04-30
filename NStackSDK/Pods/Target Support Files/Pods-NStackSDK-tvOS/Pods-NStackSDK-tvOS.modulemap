@@ -1,0 +1,6 @@
+module Pods_NStackSDK_tvOS [system] {
+  umbrella header "Pods-NStackSDK-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

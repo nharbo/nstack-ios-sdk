@@ -1,0 +1,6 @@
+module Pods_NStackSDK [system] {
+  umbrella header "Pods-NStackSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

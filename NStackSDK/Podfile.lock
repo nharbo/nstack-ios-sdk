@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Cashier (1.2.1)
+  - Serpent (1.1.0):
+    - Serpent/Core (= 1.1.0)
+  - Serpent/Core (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.0)
+  - Cashier (~> 1.2.1)
+  - Serpent (~> 1.1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Cashier
+    - Serpent
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Cashier: 27682884f91c0019531eceb168d72f0d59ccf49e
+  Serpent: 9b2995d24d090d0a7857b5e5c7691c5a57335d57
+
+PODFILE CHECKSUM: 40a59948ced5ded49f559a3cf45465b77335dd7f
+
+COCOAPODS: 1.5.0

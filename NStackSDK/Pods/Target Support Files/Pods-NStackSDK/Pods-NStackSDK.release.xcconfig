@@ -1,0 +1,11 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Cashier"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/Cashier-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/Serpent-iOS"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS/Alamofire.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/Cashier/Cashier-iOS.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Serpent-iOS/Serpent.modulemap" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Cashier"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Alamofire-iOS" -l"Cashier-iOS" -l"Serpent-iOS"
+OTHER_SWIFT_FLAGS = $(inherited) -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS/Alamofire.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/Cashier/Cashier-iOS.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Serpent-iOS/Serpent.modulemap" $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/Serpent-iOS"
